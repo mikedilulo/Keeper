@@ -21,6 +21,11 @@ namespace Keepr.Repositories
       return _db.Query<Keep>(sql);
     }
 
+    internal IEnumerable<Keep> GetPrivateKeep(string userId)
+    {
+      string sql = "SELECT * FROM keeps WHERE isPrivate = 1;";
+      return _db.Query<Keep>(sql);
+    }
     internal Keep GetKeepById(int id)
     {
       string sql = "SELECT * FROM keeps WHERE id = @id";
@@ -41,6 +46,7 @@ namespace Keepr.Repositories
       return id;
     }
 
+
     internal void EditKeepById(Keep editedKeep)
     {
       string sql = @"
@@ -51,11 +57,11 @@ namespace Keepr.Repositories
       img = @Img,
       isPrivate = @IsPrivate,
       views = @Views,
+      timeStamp = @TimeStamp,
       shares = @Shares,
       keeps = @Keeps,
-      createdBy = @CreatedBy,
-      timeStamp = @TimeStamp
-      WHERE (id = @id AND userId = @UserId";
+      createdBy = @CreatedBy
+      WHERE id = @id AND userId = @UserId";
       _db.Execute(sql, editedKeep);
     }
 

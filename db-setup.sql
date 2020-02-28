@@ -6,7 +6,7 @@ USE keeper007;
 --     description VARCHAR(255) NOT NULL,
 --     img VARCHAR(255) NOT NULL,
 --     createdBy VARCHAR(100) NOT NULL,
---     timeStamp DATETIME NOT NULL,
+--     timeStamp DATETIME,
 --     userId VARCHAR(255),
 --     isPrivate TINYINT,
 --     views INT DEFAULT 0,

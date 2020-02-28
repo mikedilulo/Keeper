@@ -23,6 +23,10 @@ namespace Keepr.Services
       if (foundKeep == null) { throw new Exception("Invalid: Specified Keep Id Cannot Be Found"); }
       return foundKeep;
     }
+    internal IEnumerable<Keep> GetPrivateKeep(string userId)
+    {
+      return _repo.GetPrivateKeep(userId);
+    }
     public Keep Create(Keep newKeep)
     {
       newKeep.Id = _repo.Create(newKeep);
@@ -37,6 +41,7 @@ namespace Keepr.Services
       _repo.EditKeepById(editedKeep);
       return editedKeep;
     }
+
 
     internal object DeleteKeepById(string userId, int id)
     {
