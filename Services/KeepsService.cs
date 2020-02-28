@@ -17,18 +17,13 @@ namespace Keepr.Services
     {
       return _repo.Get();
     }
-
-    internal object GetPrivateKeeps(string userId)
-    {
-      throw new NotImplementedException();
-    }
     public Keep Create(Keep newKeep)
     {
       newKeep.Id = _repo.Create(newKeep);
       return newKeep;
     }
 
-    internal object CreatePrivateKeep(Keep newPrivateKeep, string userId)
+    internal object GetKeepById(int id)
     {
       throw new NotImplementedException();
     }

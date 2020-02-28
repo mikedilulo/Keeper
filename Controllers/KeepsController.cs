@@ -33,13 +33,13 @@ namespace Keepr.Controllers
       };
     }
 
-    [HttpGet("/private")]
+    [HttpGet("{id}")]
     [Authorize]
-    public ActionResult<IEnumerable<Keep>> Get(string userId)
+    public ActionResult<Keep> GetById(int id)
     {
       try
       {
-        return Ok(_ks.GetPrivateKeeps(userId));
+        return Ok(_ks.GetKeepById(id));
       }
       catch (Exception e)
       {
@@ -63,22 +63,6 @@ namespace Keepr.Controllers
       }
     }
 
-    [HttpPost]
-    [Authorize]
-    public ActionResult<Keep> Post([FromBody] Keep newPrivateKeep, string userId)
-    {
-      try
-      {
-        var creatorId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-        newPrivateKeep.UserId = userId;
-        return Ok(_ks.CreatePrivateKeep(newPrivateKeep, userId));
-
-      }
-      catch (Exception e)
-      {
-        return BadRequest(e.Message);
-      }
-    }
 
     [HttpPut("{id}")]
     [Authorize]
