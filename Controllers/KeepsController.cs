@@ -33,7 +33,7 @@ namespace Keepr.Controllers
       };
     }
 
-    [HttpGet("private/{id}")]
+    [HttpGet("private")]
     [Authorize]
     public ActionResult<IEnumerable<Keep>> Get(string userId)
     {
