@@ -21,7 +21,7 @@ namespace Keepr.Repositories
       return _db.Query<Keep>(sql);
     }
 
-    internal IEnumerable<PrivateKeep> GetPrivateKeeps(string userId)
+    internal object GetKeepById(int id)
     {
       throw new NotImplementedException();
     }
@@ -31,7 +31,12 @@ namespace Keepr.Repositories
       throw new NotImplementedException();
     }
 
-    internal int CreatePrivateKeep(Keep newPrivateKeep, string userId)
+    internal void EditKeepById(Keep editedKeep)
+    {
+      throw new NotImplementedException();
+    }
+
+    internal void DeleteKeepById(int id)
     {
       throw new NotImplementedException();
     }
