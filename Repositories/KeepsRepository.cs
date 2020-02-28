@@ -43,12 +43,26 @@ namespace Keepr.Repositories
 
     internal void EditKeepById(Keep editedKeep)
     {
-      throw new NotImplementedException();
+      string sql = @"
+      UPDATE keeps
+      SET
+      name = @Name,
+      description = @Description,
+      img = @Img,
+      isPrivate = @IsPrivate,
+      views = @Views,
+      shares = @Shares,
+      keeps = @Keeps,
+      createdBy = @CreatedBy,
+      timeStamp = @TimeStamp
+      WHERE (id = @id AND userId = @UserId";
+      _db.Execute(sql, editedKeep);
     }
 
     internal void DeleteKeepById(int id)
     {
-      throw new NotImplementedException();
+      string sql = "DELETE FROM keeps WHERE id = @id";
+      _db.Execute(sql, new { id });
     }
   }
 }
