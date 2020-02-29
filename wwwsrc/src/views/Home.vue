@@ -5,6 +5,13 @@
         <homenav />
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div v-for="keep in publicKeeps" :key="keep.id">
+          <publicKeeps :keepData="keep" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -18,6 +25,9 @@ export default {
   computed: {
     user() {
       return this.$store.state.user;
+    },
+    publicKeeps() {
+      return this.$store.state.publicKeeps;
     }
   },
   methods: {
