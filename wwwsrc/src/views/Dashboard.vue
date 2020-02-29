@@ -13,7 +13,7 @@ import homenav from "@/components/HomeNavbar.vue";
 export default {
   name: "dashboard",
   mounted() {
-    this.$store.dispatch("getKeeps");
+    this.$store.dispatch("getPublicKeeps");
   },
   computed: {
     publicKeeps() {

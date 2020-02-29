@@ -131,7 +131,7 @@ export default {
   props: ["keepData"],
   methods: {
     deleteKeep(id) {
-      this.$store.dispatch("deleteKeep", id);
+      this.$store.dispatch("deletePublicKeep", id);
     }
   }
 };

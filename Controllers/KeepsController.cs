@@ -32,28 +32,55 @@ namespace Keepr.Controllers
         return BadRequest(e.Message);
       };
     }
-
     [HttpGet("private")]
     [Authorize]
-    public ActionResult<IEnumerable<Keep>> Get(string userId)
+
+    public ActionResult<IEnumerable<Keep>> GetPrivateKeepsByUserId(string userId)
     {
       try
       {
-        return Ok(_ks.GetPrivateKeep(userId));
+        var creatorId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        return Ok(_ks.GetPrivateKeeps(userId));
       }
       catch (Exception e)
       {
         return BadRequest(e.Message);
       }
     }
-
-    [HttpGet("{id}")]
+    [HttpGet("public")]
     [Authorize]
-    public ActionResult<Keep> GetById(int id)
+
+    public ActionResult<IEnumerable<Keep>> GetAllKeepsByUserId(string userId)
     {
       try
       {
-        return Ok(_ks.GetKeepById(id));
+        var creatorId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        return Ok(_ks.GetAllKeepsByUserId(userId));
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      }
+    }
+    [HttpGet("public/{id}")]
+    public ActionResult<Keep> GetPublicKeepById(int id)
+    {
+      try
+      {
+        return Ok(_ks.GetPublicKeepById(id));
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      }
+    }
+    [HttpGet("private/{id}")]
+    [Authorize]
+    public ActionResult<Keep> GetPrivateKeepById(int id)
+    {
+      try
+      {
+        return Ok(_ks.GetPrivateKeepById(id));
       }
       catch (Exception e)
       {
@@ -77,16 +104,30 @@ namespace Keepr.Controllers
       }
     }
 
-
-    [HttpPut("{id}")]
+    [HttpPut("public/{id}")]
     [Authorize]
-    public ActionResult<Keep> Edit([FromBody] Keep editedKeep, int id)
+    public ActionResult<Keep> Edit([FromBody] Keep editedPublicKeep, int id)
     {
       try
       {
-        editedKeep.Id = id;
-        editedKeep.UserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-        return Ok(_ks.EditKeepById(editedKeep));
+        editedPublicKeep.Id = id;
+        editedPublicKeep.UserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        return Ok(_ks.EditPublicKeepById(editedPublicKeep));
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      }
+    }
+    [HttpPut("private/{id}")]
+    [Authorize]
+    public ActionResult<Keep> Edit([FromBody] Keep editedPrivateKeep, int id, string userId)
+    {
+      try
+      {
+        editedPrivateKeep.Id = id;
+        editedPrivateKeep.UserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        return Ok(_ks.EditPrivateKeepById(editedPrivateKeep));
       }
       catch (Exception e)
       {
@@ -94,14 +135,30 @@ namespace Keepr.Controllers
       }
     }
 
-    [HttpDelete("{id}")]
+    //TODO Delete methods hard delete data / need to switch to soft delete
+
+    [HttpDelete("public/{id}")]
     [Authorize]
-    public ActionResult<String> Delete(int id)
+    public ActionResult<String> DeletePublicKeep(int id)
     {
       try
       {
         var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-        return Ok(_ks.DeleteKeepById(userId, id));
+        return Ok(_ks.DeletePublicKeepById(userId, id));
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      }
+    }
+    [HttpDelete("private/{id}")]
+    [Authorize]
+    public ActionResult<String> DeletePrivateKeep(int id)
+    {
+      try
+      {
+        var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        return Ok(_ks.DeletePrivateKeepById(userId, id));
       }
       catch (Exception e)
       {

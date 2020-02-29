@@ -17,15 +17,26 @@ namespace Keepr.Services
     {
       return _repo.Get();
     }
-    internal Keep GetKeepById(int id)
+
+    internal IEnumerable<Keep> GetPrivateKeeps(string userId)
     {
-      var foundKeep = _repo.GetKeepById(id);
-      if (foundKeep == null) { throw new Exception("Invalid: Specified Keep Id Cannot Be Found"); }
+      return _repo.GetPrivateKeeps(userId);
+    }
+    internal IEnumerable<Keep> GetAllKeepsByUserId(string userId)
+    {
+      return _repo.GetAllKeepsByUserId(userId);
+    }
+    internal Keep GetPublicKeepById(int id)
+    {
+      var foundKeep = _repo.GetPublicKeepById(id);
+      if (foundKeep == null) { throw new Exception("Invalid Id: Public Keep Cannot Be Found"); }
       return foundKeep;
     }
-    internal IEnumerable<Keep> GetPrivateKeep(string userId)
+    internal Keep GetPrivateKeepById(int id)
     {
-      return _repo.GetPrivateKeep(userId);
+      var foundPrivateKeep = _repo.GetPrivateKeepById(id);
+      if (foundPrivateKeep == null) { throw new Exception("Invalid Id: Private Keep Cannot Be Found"); }
+      return foundPrivateKeep;
     }
     public Keep Create(Keep newKeep)
     {
@@ -33,23 +44,39 @@ namespace Keepr.Services
       return newKeep;
     }
 
-
-    internal Keep EditKeepById(Keep editedKeep)
+    internal Keep EditPublicKeepById(Keep editedPublicKeep)
     {
-      Keep keepExists = _repo.GetKeepById(editedKeep.Id);
-      if (keepExists == null) { throw new Exception("Invalid: Specified Keep Id Cannot Be Found To Edit"); }
-      _repo.EditKeepById(editedKeep);
-      return editedKeep;
+      Keep publicKeepExists = _repo.GetPublicKeepById(editedPublicKeep.Id);
+      if (publicKeepExists == null) { throw new Exception("Invalid Id: Cannot Edit Public Keep"); }
+      _repo.EditPublicKeepById(editedPublicKeep);
+      return editedPublicKeep;
     }
 
-
-    internal object DeleteKeepById(string userId, int id)
+    internal object EditPrivateKeepById(Keep editedPrivateKeep)
     {
-      var keepExistsToDelete = _repo.GetKeepById(id);
-      if (keepExistsToDelete == null) { throw new Exception("Invalid: Specified Keep Id Cannot Be Found To Delete"); }
-      if (keepExistsToDelete.UserId != userId) { throw new Exception("Invalid: You Do Not Have Permission To Delete This Keep"); }
-      _repo.DeleteKeepById(id);
-      return "Success: You Have Deleted The Keep";
+      Keep privateKeepExists = _repo.GetPrivateKeepById(editedPrivateKeep.Id);
+      if (privateKeepExists == null) { throw new Exception("Invalid Id: Cannot Edit Private Keep"); }
+      _repo.EditPrivateKeepById(editedPrivateKeep);
+      return editedPrivateKeep;
+    }
+
+    //TODO Delete methods hard delete data / need to switch to soft delete
+    internal object DeletePublicKeepById(string userId, int id)
+    {
+      var publicKeepExistsToDelete = _repo.GetPublicKeepById(id);
+      if (publicKeepExistsToDelete == null) { throw new Exception("Invalid Id: Cannot Delete This Public Keep"); }
+      if (publicKeepExistsToDelete.UserId != userId) { throw new Exception("Your Request Is Invalid: You Cannot Delete This Public Keep"); }
+      _repo.DeletePublicKeepByid(id);
+      return "Successfully Deleted Public Keep";
+    }
+
+    internal object DeletePrivateKeepById(string userId, int id)
+    {
+      var privateKeepExistsToDelete = _repo.GetPrivateKeepById(id);
+      if (privateKeepExistsToDelete == null) { throw new Exception("Invalid Id: Cannot Delete This Public Keep"); }
+      if (privateKeepExistsToDelete.UserId != userId) { throw new Exception("Your Request Is Invalid: You Cannot Delete This Private Keep"); }
+      _repo.DeletePrivateKeepByid(id);
+      return "Successfully Deleted Private Keep";
     }
   }
 }

@@ -21,14 +21,17 @@ export default new Vuex.Store({
     privateKeeps: []
   },
   mutations: {
+    setPublicKeeps(state, data) {
+      state.publicKeeps = data;
+    },
+    setPrivateKeeps(state, data) {
+      state.privateKeeps = data;
+    },
     createPublicKeep(state, data) {
       state.publicKeeps.unshift(data);
     },
     createPrivateKeep(state, data) {
       state.privateKeeps.unshift(data);
-    },
-    setKeeps(state, data) {
-      state.publicKeeps = data;
     }
   },
   actions: {
@@ -38,19 +41,20 @@ export default new Vuex.Store({
     resetBearer() {
       api.defaults.headers.authorization = "";
     },
+
     // #region KEEPS
-    async getKeeps({ commit, dispatch }) {
+    async getPublicKeeps({ commit, dispatch }) {
       try {
         let res = await api.get("keeps");
-        commit("setKeeps", res.data);
+        commit("setPublicKeeps", res.data);
       } catch (error) {
         console.error(error);
       }
     },
-    async createPrivateKeep({ commit, dispatch }, payload) {
+    async getPrivateKeeps({ commit, dispatch }) {
       try {
-        let res = await api.post("keeps", payload);
-        commit("createPrivateKeep", res.data);
+        let res = await api.get("private");
+        commit("setPrivateKeeps", res.data);
       } catch (error) {
         console.error(error);
       }
@@ -63,11 +67,27 @@ export default new Vuex.Store({
         console.error(error);
       }
     },
-    async deleteKeep({ commit, dispatch }, id) {
+    async createPrivateKeep({ commit, dispatch }, payload) {
       try {
-        await api.delete("keeps/" + id);
+        let res = await api.post("keeps", payload);
+        commit("createPrivateKeep", res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async deletePublicKeep({ commit, dispatch }, id) {
+      try {
+        let res = await api.delete("keeps/public/" + id);
         console.log(id);
-        dispatch("getKeeps");
+        dispatch("getPublicKeeps");
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async deletePrivateKeep({ commit, dispatch }, id) {
+      try {
+        let res = await api.delete("keeps/private/" + id);
+        dispatch("getPrivateKeeps");
       } catch (error) {
         console.error(error);
       }

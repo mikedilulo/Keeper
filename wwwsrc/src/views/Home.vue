@@ -21,7 +21,7 @@ import homenav from "@/components/HomeNavbar.vue";
 export default {
   name: "home",
   mounted() {
-    this.$store.dispatch("getKeeps");
+    this.$store.dispatch("getPublicKeeps");
   },
   components: {
     homenav,
