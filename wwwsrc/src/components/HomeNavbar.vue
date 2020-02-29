@@ -213,22 +213,6 @@ export default {
       await this.$auth.logout();
       this.$store.dispatch("resetBearer");
       this.$router.push({ name: "home" });
-    },
-    createKeep() {
-      let newKeep = { ...this.newKeep };
-      this.$store.dispatch("createKeep", newKeep);
-      if (this.newKeep.isPrivate.checked) {
-        this.$store.dispatch("createPrivateKeep", newKeep);
-      }
-      this.newKeep = {
-        name: "",
-        description: "",
-        img: "",
-        isPrivate: Boolean,
-        views: Number,
-        shares: Number,
-        keeps: Number
-      };
     }
   }
 };
