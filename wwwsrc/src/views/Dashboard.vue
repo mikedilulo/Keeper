@@ -1,14 +1,21 @@
 <template>
   <div class="dashboard">
-    <h1>WELCOME TO THE DASHBOARD</h1>
-    public {{ publicKeeps }} user {{ userKeeps }}
+    <homenav />
+    <div class="dashboardkeeps container-fluid">
+      <div class="row">
+        <div class="col-md-12"></div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import homenav from "@/components/HomeNavbar.vue";
 export default {
-  mounted() {},
-  computed: {}
+  name: "dashboard",
+  components: {
+    homenav
+  }
 };
 </script>
 

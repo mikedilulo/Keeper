@@ -43,11 +43,6 @@ export default {
       this.$store.dispatch("setBearer", this.$auth.bearer);
       this.$router.push({ name: "home" });
       console.log(this.$auth.user);
-    },
-    async logout() {
-      await this.$auth.logout();
-      this.$store.dispatch("resetBearer");
-      this.$router.push({ name: "login" });
     }
   },
   components: {
