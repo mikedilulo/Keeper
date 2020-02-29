@@ -2,7 +2,7 @@
   <div class="keepcomponent">
     <div class="row">
       <div class="col-md-2 mb-5 mt-5">
-        <div class="latest-card">
+        <div class="latest-card" :style="keepData.img">
           <div class="dropdown">
             <button
               class="btn btn-light dropdown-toggle d-flex justify-content-end ml-1"
