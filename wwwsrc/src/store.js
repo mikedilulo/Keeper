@@ -17,11 +17,15 @@ let api = Axios.create({
 
 export default new Vuex.Store({
   state: {
-    publicKeeps: []
+    publicKeeps: [],
+    privateKeeps: []
   },
   mutations: {
     createPublicKeep(state, data) {
       state.publicKeeps.unshift(data);
+    },
+    createPrivateKeep(state, data) {
+      state.privateKeeps.unshift(data);
     }
   },
   actions: {
@@ -32,6 +36,14 @@ export default new Vuex.Store({
       api.defaults.headers.authorization = "";
     },
     // #region KEEPS
+    async createPrivateKeep({ commit, dispatch }, payload) {
+      try {
+        let res = await api.post("keeps", payload);
+        commit("createPrivateKeep", res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    },
     async createKeep({ commit, dispatch }, payload) {
       try {
         let res = await api.post("keeps", payload);
@@ -40,5 +52,6 @@ export default new Vuex.Store({
         console.error(error);
       }
     }
+    // #endregion
   }
 });
