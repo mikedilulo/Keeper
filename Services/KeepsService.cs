@@ -43,7 +43,7 @@ namespace Keepr.Services
     }
 
 
-    internal object DeleteKeepById(string userId, int id)
+    internal string DeleteKeepById(string userId, int id)
     {
       var keepExistsToDelete = _repo.GetKeepById(id);
       if (keepExistsToDelete == null) { throw new Exception("Invalid: Specified Keep Id Cannot Be Found To Delete"); }

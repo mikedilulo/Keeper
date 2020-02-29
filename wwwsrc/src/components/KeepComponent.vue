@@ -69,10 +69,15 @@
                     <i class="fas fa-eye mr-1"></i>:
                     <span>0</span>
                   </h4>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-warning mr-auto" data-dismiss="modal">Delete</button>
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-warning mr-auto"
+                      data-dismiss="modal"
+                      @click="deleteKeep(keepData.id)"
+                    >Delete</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -123,7 +128,13 @@
 <script>
 export default {
   name: "keepcomponent",
-  props: ["keepData"]
+  props: ["keepData"],
+  methods: {
+    deleteKeep(id) {
+      console.log(id);
+      this.$store.dispatch("deleteKeep", id);
+    }
+  }
 };
 </script>
 

@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-md-12">
         <div v-for="keep in publicKeeps" :key="keep.id">
-          <publicKeeps :keepData="keep" />
+          <keepcomponent :keepData="keep" />
         </div>
       </div>
     </div>
@@ -16,11 +16,16 @@
 </template>
 
 <script>
+import keepcomponent from "@/components/KeepComponent.vue";
 import homenav from "@/components/HomeNavbar.vue";
 export default {
   name: "home",
+  mounted() {
+    this.$store.dispatch("getKeeps");
+  },
   components: {
-    homenav
+    homenav,
+    keepcomponent
   },
   computed: {
     user() {
