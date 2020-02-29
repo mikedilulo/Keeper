@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <navbar />
+    <!-- <loginbar /> -->
     <router-view />
   </div>
 </template>
 
 <script>
-import Navbar from "@/components/navbar";
+import loginbar from "@/components/LoginNavbar.vue";
 import { onAuth } from "@bcwdev/auth0-vue";
 export default {
   name: "App",
@@ -15,7 +15,7 @@ export default {
     this.$store.dispatch("setBearer", this.$auth.bearer);
   },
   components: {
-    Navbar
+    loginbar
   }
 };
 </script>
