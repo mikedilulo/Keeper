@@ -71,6 +71,16 @@
           <div class="modal-body">
             <form>
               <div class="form-group">
+                <label for="created-name" class="col-form-label">Created By:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="created-name"
+                  placeholder="Enter Created By"
+                  v-model="newKeep.createdBy"
+                />
+              </div>
+              <div class="form-group">
                 <label for="keep-name" class="col-form-label">Keep Name:</label>
                 <input
                   type="text"
@@ -204,7 +214,8 @@ export default {
         isPrivate: false,
         views: 0,
         shares: 0,
-        keeps: 0
+        keeps: 0,
+        createdBy: ""
       }
     };
   },
@@ -213,6 +224,23 @@ export default {
       await this.$auth.logout();
       this.$store.dispatch("resetBearer");
       this.$router.push({ name: "home" });
+    },
+    createKeep() {
+      let newKeep = { ...this.newKeep };
+      this.$store.dispatch("createKeep", newKeep);
+      if (newKeep.isPrivate) {
+        this.$store.dispatch("createPrivateKeep", newKeep);
+      }
+      this.newKeep = {
+        name: "",
+        description: "",
+        img: "",
+        isPrivate: Boolean,
+        views: "",
+        shares: "",
+        keeps: "",
+        createdBy: ""
+      };
     }
   }
 };
