@@ -1,14 +1,8 @@
 <template>
-  <div class="dashboard">
+  <div class="dashboard container-fluid pr-0 pl-0">
     <homenav />
-    <div class="dashboardkeeps container-fluid">
-      <div class="row">
-        <div class="col-md-6 d-flex inline">
-          <div v-for="keep in publicKeeps" :key="keep.id">
-            <keepcomponent :keepData="keep" />
-          </div>
-        </div>
-      </div>
+    <div v-for="keep in publicKeeps" :key="keep.id">
+      <keepcomponent :keepData="keep" />
     </div>
   </div>
 </template>

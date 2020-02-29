@@ -1,7 +1,7 @@
 <template>
   <div class="keepcomponent container-fluid">
     <div class="row">
-      <div class="col-9 mb-5 mt-5 d-flex">
+      <div class="col-md-2 mb-5 mt-5">
         <div class="latest-card">
           <div class="dropdown">
             <button
@@ -22,7 +22,7 @@
             <img :src="keepData.img" class="latest-card image" alt />
             <dd class="d-flex justify-content-between">
               <button
-                class="btn btn-light btn-sm button mb-3"
+                class="btn btn-light btn-sm button"
                 type="button"
                 data-toggle="modal"
                 data-target="#shareModal"
@@ -30,7 +30,7 @@
                 <i class="fas fa-share-square"></i>
               </button>
               <button
-                class="btn btn-light btn-sm button mb-3"
+                class="btn btn-light btn-sm button"
                 type="button"
                 data-toggle="modal"
                 data-target="#informationModal"
@@ -39,80 +39,80 @@
               </button>
             </dd>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- Information Modal -->
-    <div
-      class="modal fade"
-      id="informationModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Keep Information</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <h4>
-              <i class="fab fa-korvue mr-1"></i>:
-              <span>0</span>
-            </h4>
-            <h4>
-              <i class="fas fa-share-square mr-1"></i>:
-              <span>0</span>
-            </h4>
-            <h4>
-              <i class="fas fa-eye mr-1"></i>:
-              <span>0</span>
-            </h4>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-warning mr-auto" data-dismiss="modal">Delete</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Share Modal -->
-    <div
-      class="modal fade"
-      id="shareModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Share Your Keep</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="recipient-name"
-                  placeholder="Type Email Here"
-                />
+          <!-- Information Modal -->
+          <div
+            class="modal fade"
+            id="informationModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Keep Information</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h4>
+                    <i class="fab fa-korvue mr-1"></i>:
+                    <span>0</span>
+                  </h4>
+                  <h4>
+                    <i class="fas fa-share-square mr-1"></i>:
+                    <span>0</span>
+                  </h4>
+                  <h4>
+                    <i class="fas fa-eye mr-1"></i>:
+                    <span>0</span>
+                  </h4>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning mr-auto" data-dismiss="modal">Delete</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
               </div>
-              <button type="button" class="btn btn-success">Send Keep</button>
-            </form>
+            </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <!-- Share Modal -->
+          <div
+            class="modal fade"
+            id="shareModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Share Your Keep</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Recipient:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="recipient-name"
+                        placeholder="Type Email Here"
+                      />
+                    </div>
+                    <button type="button" class="btn btn-success">Send Keep</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -136,10 +136,10 @@ export default {
 }
 .button {
   display: none;
-  z-index: 1;
 }
 .latest-card:hover .button {
   display: block;
+  z-index: 1;
 }
 .dropdown {
   position: absolute;
