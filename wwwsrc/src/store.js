@@ -26,6 +26,9 @@ export default new Vuex.Store({
     },
     createPrivateKeep(state, data) {
       state.privateKeeps.unshift(data);
+    },
+    setKeeps(state, data) {
+      state.publicKeeps = data;
     }
   },
   actions: {
@@ -36,6 +39,14 @@ export default new Vuex.Store({
       api.defaults.headers.authorization = "";
     },
     // #region KEEPS
+    async getKeeps({ commit, dispatch }) {
+      try {
+        let res = await api.get("keeps");
+        commit("setKeeps", res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    },
     async createPrivateKeep({ commit, dispatch }, payload) {
       try {
         let res = await api.post("keeps", payload);

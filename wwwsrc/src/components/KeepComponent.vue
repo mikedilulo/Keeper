@@ -1,8 +1,8 @@
 <template>
-  <div class="keepcomponent">
+  <div class="keepcomponent container-fluid">
     <div class="row">
-      <div class="col-md-2 mb-5 mt-5">
-        <div class="latest-card" :style="keepData.img">
+      <div class="col-9 mb-5 mt-5 d-flex">
+        <div class="latest-card">
           <div class="dropdown">
             <button
               class="btn btn-light dropdown-toggle d-flex justify-content-end ml-1"
@@ -18,8 +18,9 @@
               </div>
             </div>
           </div>
-          <div class="card-body latest-card">
-            <div class="d-flex justify-content-between">
+          <div class="card-body p-0">
+            <img :src="keepData.img" class="latest-card image" alt />
+            <dd class="d-flex justify-content-between">
               <button
                 class="btn btn-light btn-sm button mb-3"
                 type="button"
@@ -36,7 +37,7 @@
               >
                 <i class="fas fa-ellipsis-h"></i>
               </button>
-            </div>
+            </dd>
           </div>
         </div>
       </div>
@@ -128,7 +129,6 @@ export default {
 
 <style>
 .latest-card {
-  border: 1px solid black;
   border-radius: 10px;
   max-width: 100%;
   max-height: 100%;
@@ -136,7 +136,7 @@ export default {
 }
 .button {
   display: none;
-  margin-top: 210px;
+  z-index: 1;
 }
 .latest-card:hover .button {
   display: block;
@@ -145,8 +145,8 @@ export default {
   position: absolute;
 }
 #dropdownMenuButton {
-  min-width: 180px;
-  min-height: 40px;
+  min-width: 90%;
+  min-height: 100%;
 }
 .dropdown {
   display: none;
@@ -155,12 +155,18 @@ export default {
   display: block;
 }
 .card-body {
-  min-height: 300px;
+  min-height: 100%;
 }
 .dropbtn,
 .sub-dropbtn {
   background-color: transparent;
   cursor: pointer;
   border: none;
+}
+.image {
+  z-index: -1;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
 }
 </style>

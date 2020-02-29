@@ -3,7 +3,7 @@
     <homenav />
     <div class="dashboardkeeps container-fluid">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6 d-flex inline">
           <div v-for="keep in publicKeeps" :key="keep.id">
             <keepcomponent :keepData="keep" />
           </div>
@@ -18,9 +18,12 @@ import keepcomponent from "@/components/KeepComponent.vue";
 import homenav from "@/components/HomeNavbar.vue";
 export default {
   name: "dashboard",
+  mounted() {
+    this.$store.dispatch("getKeeps");
+  },
   computed: {
     publicKeeps() {
-      this.$store.state.publicKeeps;
+      return this.$store.state.publicKeeps;
     }
   },
   components: {
