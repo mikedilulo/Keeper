@@ -23,12 +23,6 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active mr-4">
-                <a class="nav-link" href="#">Keeps</a>
-              </li>
-              <li class="nav-item active mr-4">
-                <a class="nav-link" href="#">Vaults</a>
-              </li>
-              <li class="nav-item active mr-4">
                 <a class="nav-link" href="#">Users</a>
               </li>
               <li class="nav-item active mr-4">
