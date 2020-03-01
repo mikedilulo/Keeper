@@ -1,3 +1,3 @@
 ## Keepr
 
-An Application that is similar to a Pinterest Clone
+An Application that is a clone to Pinterest
