@@ -18,7 +18,9 @@ let api = Axios.create({
 export default new Vuex.Store({
   state: {
     publicKeeps: [],
-    privateKeeps: []
+    privateKeeps: [],
+    activePublicKeep: {},
+    activePrivateKeep: {}
   },
   mutations: {
     setPublicKeeps(state, data) {
@@ -32,6 +34,12 @@ export default new Vuex.Store({
     },
     createPrivateKeep(state, data) {
       state.privateKeeps.unshift(data);
+    },
+    setPublicActiveKeep(state, keep) {
+      state.activePublicKeep = keep;
+    },
+    setPrivateActiveKeep(state, keep) {
+      state.activePrivateKeep = keep;
     }
   },
   actions: {
@@ -88,6 +96,22 @@ export default new Vuex.Store({
       try {
         let res = await api.delete("keeps/private/" + id);
         dispatch("getPrivateKeeps");
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async getPublicKeepById({ commit, dispatch }, id) {
+      try {
+        let res = await api.get("keeps/public/" + id);
+        commit("setPublicActiveKeep", res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async getPrivateKeepById({ commit, dispatch }, id) {
+      try {
+        let res = await api.get("keeps/private/" + id);
+        commit("setPrivateActiveKeep", res.data);
       } catch (error) {
         console.error(error);
       }
