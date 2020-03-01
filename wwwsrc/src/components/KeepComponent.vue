@@ -19,7 +19,9 @@
             </div>
           </div>
           <div class="card-body p-0">
-            <img :src="keepData.img" class="latest-card image" alt />
+            <router-link :to="{name: 'publicKeepDetails', params: {id: keepData.id}}">
+              <img :src="keepData.img" class="latest-card image" alt />
+            </router-link>
             <dd class="d-flex justify-content-between">
               <button
                 class="btn btn-light btn-sm button"
