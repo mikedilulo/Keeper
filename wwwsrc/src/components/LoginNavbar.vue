@@ -1,7 +1,7 @@
 <template>
   <div class="loginbar">
     <div class="row">
-      <div class="col-md-12 p-0">
+      <div class="col-md-12 pr-0 pl-0">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand logo headings" href="#">
             <i class="fab fa-korvue logo headings"></i>
