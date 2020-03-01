@@ -11,7 +11,7 @@
 import privatekeepcomponent from "@/components/PrivateKeepComponent.vue";
 import homenav from "@/components/HomeNavbar.vue";
 export default {
-  name: "dashboard",
+  name: "private",
   mounted() {
     this.$store.dispatch("getPrivateKeeps");
   },

@@ -53,7 +53,7 @@ export default new Vuex.Store({
     },
     async getPrivateKeeps({ commit, dispatch }) {
       try {
-        let res = await api.get("private");
+        let res = await api.get("keeps/private");
         commit("setPrivateKeeps", res.data);
       } catch (error) {
         console.error(error);
