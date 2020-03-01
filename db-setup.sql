@@ -18,6 +18,6 @@ USE keeper007;
 
 -- SELECT * FROM keeps;
 
--- DROP TABLE keeps;
-
 -- TRUNCATE TABLE keeps;
+
+-- DROP TABLE keeps;
