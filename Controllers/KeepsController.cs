@@ -50,12 +50,12 @@ namespace Keepr.Controllers
     [HttpGet("public")]
     [Authorize]
 
-    public ActionResult<IEnumerable<Keep>> GetAllKeepsByUserId(string userId)
+    public ActionResult<IEnumerable<Keep>> GetPublicKeepsByUserId(string userId)
     {
       try
       {
         var creatorId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-        return Ok(_ks.GetAllKeepsByUserId(userId));
+        return Ok(_ks.GetPublicKeeps(userId));
       }
       catch (Exception e)
       {

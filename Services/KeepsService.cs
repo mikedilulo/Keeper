@@ -22,9 +22,9 @@ namespace Keepr.Services
     {
       return _repo.GetPrivateKeeps(userId);
     }
-    internal IEnumerable<Keep> GetAllKeepsByUserId(string userId)
+    internal IEnumerable<Keep> GetPublicKeeps(string userId)
     {
-      return _repo.GetAllKeepsByUserId(userId);
+      return _repo.GetPublicKeeps(userId);
     }
     internal Keep GetPublicKeepById(int id)
     {
