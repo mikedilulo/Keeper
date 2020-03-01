@@ -1,8 +1,8 @@
 <template>
   <div class="suggestion container-fluid box-image">
     <div class="row">
-      <div class="col-md-12 mb-5">
-        <loginbar />
+      <div class="col-md-12 mb-4">
+        <homelink />
         <h1
           class="text-light d-flex justify-content-center mt-5"
         >Have a great way to make this better?</h1>
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 mb-3">
         <h5 class="text-white">@2020 Keeper</h5>
       </div>
     </div>
@@ -26,11 +26,11 @@
 
 <script>
 import contactform from "@/components/ContactForm.vue";
-import loginbar from "@/components/LoginNavbar.vue";
+import homelink from "@/components/HomeLinkNavbar.vue";
 export default {
   name: "suggestion",
   components: {
-    loginbar,
+    homelink,
     contactform
   }
 };
