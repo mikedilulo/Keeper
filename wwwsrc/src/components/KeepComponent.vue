@@ -18,29 +18,27 @@
               </div>
             </div>
           </div>
-          <router-link :to="{name: 'publicKeepDetails', params: {id: keepData.id}}">
-            <div class="card-body p-0">
-              <img :src="keepData.img" class="latest-card image" alt />
-              <dd class="d-flex justify-content-between">
-                <button
-                  class="btn btn-light btn-sm button"
-                  type="button"
-                  data-toggle="modal"
-                  data-target="#shareModal"
-                >
-                  <i class="fas fa-share-square"></i>
-                </button>
-                <button
-                  class="btn btn-light btn-sm button"
-                  type="button"
-                  data-toggle="modal"
-                  data-target="#informationModal"
-                >
-                  <i class="fas fa-ellipsis-h"></i>
-                </button>
-              </dd>
-            </div>
-          </router-link>
+          <div class="card-body p-0">
+            <img :src="keepData.img" class="latest-card image" alt />
+            <dd class="d-flex justify-content-between">
+              <button
+                class="btn btn-light btn-sm button"
+                type="button"
+                data-toggle="modal"
+                data-target="#shareModal"
+              >
+                <i class="fas fa-share-square"></i>
+              </button>
+              <button
+                class="btn btn-light btn-sm button"
+                type="button"
+                data-toggle="modal"
+                data-target="#informationModal"
+              >
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </dd>
+          </div>
         </div>
       </div>
     </div>
