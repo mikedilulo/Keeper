@@ -228,7 +228,7 @@ export default {
     createKeep() {
       let newKeep = { ...this.newKeep };
       this.$store.dispatch("createKeep", newKeep);
-      if (newKeep.isPrivate) {
+      if (newKeep.isPrivate.checked) {
         this.$store.dispatch("createPrivateKeep", newKeep);
       }
       this.newKeep = {
