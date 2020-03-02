@@ -2,12 +2,21 @@
   <div class="keepcomponent container-fluid">
     <div class="row">
       <div class="col-md-2 mb-5 mt-5">
-        <div class="latest-card">
-          <div class="card-body p-0">
-            <button type="submit" class="btn btn-dark btn-sm button">
-              <i class="fas fa-chevron-circle-down"></i>
-            </button>
-            <img :src="keepData.img" class="latest-card image" alt />
+        <div>
+          <div class="card-body p-0 latest-card">
+            <div class="d-flex justify-content-between">
+              <button type="submit" class="btn btn-dark btn-sm button">
+                <i class="fas fa-chevron-circle-down"></i>
+              </button>
+              <button
+                type="submit"
+                class="btn btn-dark btn-sm button"
+                @click="deleteKeep(keepData.id)"
+              >
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+            <img :src="keepData.img" class="latest-card" alt />
             <dd class="d-flex justify-content-between">
               <router-link :to="{name: 'publicKeepDetails', params: {id: keepData.id}}">
                 <button
@@ -22,12 +31,8 @@
               <button type="submit" class="btn btn-dark btn-sm button">
                 <i class="fas fa-share-square"></i>
               </button>
-              <button
-                type="submit"
-                class="btn btn-dark btn-sm button"
-                @click="deleteKeep(keepData.id)"
-              >
-                <i class="fas fa-trash"></i>
+              <button type="submit" class="btn btn-dark btn-sm button">
+                <i class="fas fa-pencil-alt"></i>
               </button>
             </dd>
           </div>
@@ -86,11 +91,5 @@ export default {
   background-color: transparent;
   cursor: pointer;
   border: none;
-}
-.image {
-  z-index: -1;
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
 }
 </style>
