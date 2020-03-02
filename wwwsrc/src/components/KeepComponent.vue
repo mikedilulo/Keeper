@@ -19,9 +19,7 @@
             </div>
           </div>
           <div class="card-body p-0">
-            <router-link :to="{name: 'publicKeepDetails', params: {id: keepData.id}}">
-              <img :src="keepData.img" class="latest-card image" alt />
-            </router-link>
+            <img :src="keepData.img" class="latest-card image" alt />
             <dd class="d-flex justify-content-between">
               <button
                 class="btn btn-light btn-sm button"
@@ -82,7 +80,12 @@
                 @click="deleteKeep(keepData.id)"
               >Delete</button>
               <router-link :to="{name: 'publicKeepDetails', params: {id: keepData.id}}">
-                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Details</button>
+                <button
+                  type="button"
+                  class="btn btn-outline-dark"
+                  @click="setActivePublicKeep(keepData.id)"
+                  data-dismiss="modal"
+                >Details</button>
               </router-link>
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
@@ -137,6 +140,9 @@ export default {
   methods: {
     deleteKeep(id) {
       this.$store.dispatch("deletePublicKeep", id);
+    },
+    setActivePublicKeep(id) {
+      this.$store.dispatch("getPublicKeepById", id);
     }
   }
 };
@@ -147,14 +153,13 @@ export default {
   border-radius: 10px;
   max-width: 100%;
   max-height: 100%;
-  position: relative;
 }
 .button {
   display: none;
+  z-index: 1;
 }
 .latest-card:hover .button {
   display: block;
-  z-index: 1;
 }
 .dropdown {
   position: absolute;
@@ -182,6 +187,6 @@ export default {
   z-index: -1;
   max-width: 100%;
   max-height: 100%;
-  position: relative;
+  position: absolute;
 }
 </style>

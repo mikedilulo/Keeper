@@ -33,11 +33,10 @@
 import keepdetailnav from "@/components/KeepDetailNavbar.vue";
 export default {
   name: "publickeepdetails",
+  props: ["keepData"],
   mounted() {
     this.$store.dispatch("getPublicKeepById", this.$route.params.id);
-    return this.$store.state.activePublicKeep;
   },
-  props: ["keepData"],
   computed: {
     activePublicKeep() {
       return this.$store.state.activePublicKeep;

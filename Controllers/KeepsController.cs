@@ -20,6 +20,18 @@ namespace Keepr.Controllers
     {
       _ks = ks;
     }
+    [HttpGet]
+    public ActionResult<IEnumerable<Keep>> Get()
+    {
+      try
+      {
+        return Ok(_ks.Get());
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      };
+    }
     [HttpGet("private")]
     [Authorize]
 

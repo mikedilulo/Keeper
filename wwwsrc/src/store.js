@@ -70,7 +70,6 @@ export default new Vuex.Store({
     async createKeep({ commit, dispatch }, payload) {
       try {
         let res = await api.post("keeps", payload);
-        console.log(payload.id);
         commit("createPublicKeep", res.data);
       } catch (error) {
         console.error(error);
