@@ -10,6 +10,14 @@
             </a>
           </router-link>
           <button
+            class="nav-item home-list active ml-2 mr-2 btn btn-none"
+            v-if="this.$route.name == 'privateKeepDetails'"
+          >
+            <router-link class="nav-link" :to="{ name: 'private' }">
+              <span class="text-dark">My-Private-Keeps</span>
+            </router-link>
+          </button>
+          <button
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
