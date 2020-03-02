@@ -53,7 +53,7 @@ export default new Vuex.Store({
     // #region KEEPS
     async getPublicKeeps({ commit, dispatch }) {
       try {
-        let res = await api.get("keeps");
+        let res = await api.get("keeps/public");
         commit("setPublicKeeps", res.data);
       } catch (error) {
         console.error(error);

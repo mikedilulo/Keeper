@@ -13,10 +13,6 @@ namespace Keepr.Services
     {
       _repo = repo;
     }
-    public IEnumerable<Keep> Get()
-    {
-      return _repo.Get();
-    }
 
     internal IEnumerable<Keep> GetPrivateKeeps(string userId)
     {
