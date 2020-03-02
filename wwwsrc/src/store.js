@@ -30,10 +30,10 @@ export default new Vuex.Store({
       state.privateKeeps = data;
     },
     createPublicKeep(state, data) {
-      state.publicKeeps.unshift(data);
+      state.publicKeeps.push(data);
     },
     createPrivateKeep(state, data) {
-      state.privateKeeps.unshift(data);
+      state.privateKeeps.push(data);
     },
     setPublicActiveKeep(state, keep) {
       state.activePublicKeep = keep;
