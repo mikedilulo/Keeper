@@ -74,13 +74,16 @@
               <i class="fas fa-eye mr-1"></i>:
               <span>0</span>
             </h4>
-            <div class="modal-footer">
+            <div class="modal-footer d-flex justify-content-between">
               <button
                 type="submit"
-                class="btn btn-warning mr-auto"
+                class="btn btn-warning"
                 data-dismiss="modal"
                 @click="deleteKeep(keepData.id)"
               >Delete</button>
+              <router-link :to="{name: 'publicKeepDetails', params: {id: keepData.id}}">
+                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Details</button>
+              </router-link>
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
           </div>
