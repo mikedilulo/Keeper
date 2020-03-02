@@ -35,6 +35,7 @@ export default {
   name: "publickeepdetails",
   mounted() {
     this.$store.dispatch("getPublicKeepById", this.$route.params.id);
+    return this.$store.state.activePublicKeep;
   },
   props: ["keepData"],
   computed: {
