@@ -8,6 +8,10 @@
         </div>
         <div class="col-md-5 mt-5">
           <h5 class="publickeepinfo ml-5 mb-4">
+            Keep ID:
+            <span class="text-danger">{{activePublicKeep.id}}</span>
+          </h5>
+          <h5 class="publickeepinfo ml-5 mb-4">
             Keep Created By:
             <span class="text-danger">{{activePublicKeep.createdBy}}</span>
           </h5>
