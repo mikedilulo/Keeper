@@ -1,6 +1,6 @@
 <template>
   <div class="publickeepdetails container-fluid pr-0 pl-0">
-    <aboutnav />
+    <keepdetailnav />
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-5 mt-5">
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import aboutnav from "@/components/AboutNavbar.vue";
+import keepdetailnav from "@/components/KeepDetailNavbar.vue";
 export default {
   name: "publickeepdetails",
   mounted() {
@@ -39,7 +39,7 @@ export default {
     }
   },
   components: {
-    aboutnav
+    keepdetailnav
   }
 };
 </script>
