@@ -19,9 +19,21 @@
             Keep Name:
             <span class="text-danger">{{activePublicKeep.name}}</span>
           </h5>
-          <h5 class="ml-5">
+          <h5 class="ml-5 mb-4">
             Keep Description:
             <span class="text-danger">{{activePublicKeep.description}}</span>
+          </h5>
+          <h5 class="ml-5 mb-4">
+            Viewed by Users:
+            <span class="text-danger">{{activePublicKeep.views}}</span>
+          </h5>
+          <h5 class="ml-5 mb-4">
+            Stored in Vault:
+            <span class="text-danger">{{activePublicKeep.keeps}}</span>
+          </h5>
+          <h5 class="ml-5">
+            Shared with Users:
+            <span class="text-danger">{{activePublicKeep.shares}}</span>
           </h5>
         </div>
       </div>
