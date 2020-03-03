@@ -16,13 +16,13 @@ namespace Keepr.Repositories
 
     internal IEnumerable<Vault> GetVaultsByUserId(string userId)
     {
-      string sql = "SELECT * FROM keeps WHERE userId = @UserId;";
+      string sql = "SELECT * FROM vaults WHERE userId = @UserId;";
       return _db.Query<Vault>(sql, userId);
     }
 
     internal Vault GetVaultById(int id)
     {
-      string sql = "SELECT * FROM keeps WHERE id = @id";
+      string sql = "SELECT * FROM vaults WHERE id = @id";
       return _db.QueryFirstOrDefault<Vault>(sql, new { id });
     }
 
@@ -42,12 +42,22 @@ namespace Keepr.Repositories
 
     internal void EditVaultById(Vault newEditedVault)
     {
-      throw new NotImplementedException();
+      string sql = @"
+      UPDATE vaults
+      SET
+      name = @Name,
+      description = @Description,
+      img = @Img,
+      createdBy = @CreatedBy,
+      timeStamp = @TimeStamp
+      WHERE (id = @id AND userId = @UserId)";
+      _db.Execute(sql, newEditedVault);
     }
 
     internal void DeleteVaultById(int id)
     {
-      throw new NotImplementedException();
+      string sql = "DELETE FROM vaults WHERE id = @id";
+      _db.Execute(sql, new { id });
     }
   }
 }
