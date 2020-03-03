@@ -115,6 +115,22 @@ export default new Vuex.Store({
       } catch (error) {
         console.error(error);
       }
+    },
+    async editPublicKeep({ commit, dispatch }, publicKeep) {
+      try {
+        let res = await api.put("keeps/public" + publicKeep.id);
+        dispatch("getPublicKeeps");
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async editPrivateKeep({ commit, dispatch }, privateKeep) {
+      try {
+        let res = await api.put("keeps/private" + privateKeep.id);
+        dispatch("getPrivateKeeps");
+      } catch (error) {
+        console.error(error);
+      }
     }
     // #endregion
   }
