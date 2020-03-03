@@ -5,8 +5,16 @@
       <div class="row">
         <div class="col-md-5 mt-5">
           <img :src="activePrivateKeep.img" class="latest-card image" alt />
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-dark mt-5">
+              <i class="fas fa-share-square mr-3"></i>Share Keep
+            </button>
+            <button class="btn btn-dark mt-5">
+              <i class="fas fa-pencil-alt mr-3"></i>Edit Keep
+            </button>
+          </div>
         </div>
-        <div class="col-md-5 mt-5">
+        <div class="col-md-5 mt-1">
           <h5 class="publickeepinfo ml-5 mb-4">
             Keep ID:
             <span class="text-danger">{{activePrivateKeep.id}}</span>
