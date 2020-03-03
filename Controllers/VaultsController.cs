@@ -17,11 +17,11 @@ namespace Keepr.Controllers
     }
     [HttpGet("private")]
     [Authorize]
-    public ActionResult<IEnumerable<Vault>> Get()
+    public ActionResult<IEnumerable<Vault>> Get(string userId)
     {
       try
       {
-        return Ok(_vs.GetVaultsByUserId());
+        return Ok(_vs.GetVaultsByUserId(userId));
       }
       catch (Exception e)
       {

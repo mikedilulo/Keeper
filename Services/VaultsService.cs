@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Keepr.Models;
 using Keepr.Repositories;
 
@@ -12,22 +13,25 @@ namespace Keepr.Services
       _vrepo = vrepo;
     }
 
-    internal object GetVaultsByUserId()
+    internal IEnumerable<Vault> GetVaultsByUserId(string userId)
     {
-      throw new NotImplementedException();
+      return _vrepo.GetVaultsByUserId(userId);
     }
 
-    internal object GetVaultById(int id)
+    internal Vault GetVaultById(int id)
     {
-      throw new NotImplementedException();
+      var foundVault = _vrepo.GetVaultById(id);
+      if (foundVault == null) { throw new Exception("Invalid Id: Vault Cannot Be Found"); }
+      return foundVault;
     }
 
-    internal object CreateVault(Vault newVault)
+    internal Vault CreateVault(Vault newVault)
     {
-      throw new NotImplementedException();
+      newVault.Id = _vrepo.CreateVault(newVault);
+      return newVault;
     }
 
-    internal object EditVaultById(Vault newEditedVault)
+    internal Vault EditVaultById(Vault newEditedVault)
     {
       throw new NotImplementedException();
     }
