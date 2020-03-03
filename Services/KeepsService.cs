@@ -48,7 +48,7 @@ namespace Keepr.Services
       return editedPublicKeep;
     }
 
-    internal object EditPrivateKeepById(Keep editedPrivateKeep)
+    internal Keep EditPrivateKeepById(Keep editedPrivateKeep)
     {
       Keep privateKeepExists = _repo.GetPrivateKeepById(editedPrivateKeep.Id);
       if (privateKeepExists == null) { throw new Exception("Invalid Id: Cannot Edit Private Keep"); }
