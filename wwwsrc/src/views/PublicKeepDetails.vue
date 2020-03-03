@@ -9,7 +9,11 @@
             <button class="btn btn-dark mt-5">
               <i class="fas fa-share-square mr-3"></i>Share Keep
             </button>
-            <button class="btn btn-dark mt-5">
+            <button
+              class="btn btn-dark mt-5"
+              data-toggle="modal"
+              data-target="#editedPublicKeepModal"
+            >
               <i class="fas fa-pencil-alt mr-3"></i>Edit Keep
             </button>
           </div>
