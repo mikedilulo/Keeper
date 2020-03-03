@@ -22,12 +22,7 @@
             <img :src="keepData.img" class="latest-card image" alt />
             <dd class="d-flex justify-content-between">
               <router-link :to="{name: 'publicKeepDetails', params: {id: keepData.id}}">
-                <button
-                  type="button"
-                  class="btn btn-dark btn-sm button"
-                  @click="setActivePublicKeep(keepData.id)"
-                  data-dismiss="modal"
-                >
+                <button type="button" class="btn btn-dark btn-sm button" data-dismiss="modal">
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
               </router-link>
