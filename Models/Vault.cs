@@ -9,7 +9,6 @@ namespace Keepr.Models
     public string Name { get; set; }
     public string Description { get; set; }
     public string Img { get; set; }
-    public string CreatedBy { get; set; }
     public DateTime TimeStamp { get; }
   }
 }
