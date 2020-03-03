@@ -33,12 +33,19 @@ namespace Keepr.Services
 
     internal Vault EditVaultById(Vault newEditedVault)
     {
-      throw new NotImplementedException();
+      Vault privateVaultExists = _vrepo.GetVaultById(newEditedVault.Id);
+      if (privateVaultExists == null) { throw new Exception("Invalid Id: Cannot Edit Vault"); }
+      _vrepo.EditVaultById(newEditedVault);
+      return newEditedVault;
     }
 
     internal object DeleteVaultById(string userId, int id)
     {
-      throw new NotImplementedException();
+      var privateVaultExistsToDelete = _vrepo.GetVaultById(id);
+      if (privateVaultExistsToDelete == null) { throw new Exception("Invalid Id: Cannot Delete This Vault"); }
+      if (privateVaultExistsToDelete.UserId != userId) { throw new Exception("Your Request Is Invalid: You Cannot Delete This Vault"); }
+      _vrepo.DeleteVaultById(id);
+      return "Successfully Deleted Vault";
     }
   }
 }
