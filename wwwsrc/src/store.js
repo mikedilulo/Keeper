@@ -118,7 +118,7 @@ export default new Vuex.Store({
     },
     async editPublicKeep({ commit, dispatch }, publicKeep) {
       try {
-        let res = await api.put("keeps/public" + publicKeep.id);
+        let res = await api.put("keeps/public/" + publicKeep.id, publicKeep);
         dispatch("getPublicKeeps");
       } catch (error) {
         console.error(error);
@@ -126,7 +126,7 @@ export default new Vuex.Store({
     },
     async editPrivateKeep({ commit, dispatch }, privateKeep) {
       try {
-        let res = await api.put("keeps/private" + privateKeep.id);
+        let res = await api.put("keeps/private/" + privateKeep.id, privateKeep);
         dispatch("getPrivateKeeps");
       } catch (error) {
         console.error(error);
