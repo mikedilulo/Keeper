@@ -21,7 +21,7 @@ namespace Keepr.Controllers
     {
       try
       {
-        return Ok(_vs.GetVaultsByUserId);
+        return Ok(_vs.GetVaultsByUserId());
       }
       catch (Exception e)
       {
@@ -65,6 +65,20 @@ namespace Keepr.Controllers
         newEditedVault.Id = id;
         newEditedVault.UserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
         return Ok(_vs.EditVaultById(newEditedVault));
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      }
+    }
+    [HttpDelete("private/{id}")]
+    [Authorize]
+    public ActionResult<String> Delete(int id)
+    {
+      try
+      {
+        var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        return Ok(_vs.DeleteVaultById(userId, id));
       }
       catch (Exception e)
       {
