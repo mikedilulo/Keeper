@@ -4,9 +4,21 @@
       <div class="col-md-2 mb-5 mt-5">
         <div class="latest-card">
           <div class="card-body p-0">
-            <button type="submit" class="btn btn-dark btn-sm button">
-              <i class="fas fa-chevron-circle-down"></i>
-            </button>
+            <div class="dropdown">
+              <button
+                class="btn btn-light dropdown-toggle d-flex justify-content-end ml-1"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              ></button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div>
+                  <button class="dropdown-item"></button>
+                </div>
+              </div>
+            </div>
             <img :src="keepData.img" class="latest-card image" alt />
             <dd class="d-flex justify-content-between">
               <router-link :to="{name: 'privateKeepDetails', params: {id: keepData.id}}">
@@ -19,9 +31,6 @@
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
               </router-link>
-              <button type="submit" class="btn btn-dark btn-sm button">
-                <i class="fas fa-share-square"></i>
-              </button>
               <button
                 type="submit"
                 class="btn btn-dark btn-sm button"
