@@ -22,9 +22,7 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active mr-4">
-                <a class="nav-link" href="#">Users</a>
-              </li>
+              <router-link :to="{ name: 'informationuser' }" class="nav-link active mr-4">Users</router-link>
               <li class="nav-item active mr-4">
                 <a class="nav-link" href="#">Legal</a>
               </li>

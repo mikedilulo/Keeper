@@ -20,6 +20,8 @@ import Private from "./views/PrivateKeep.vue";
 import PublicKeepDetails from "./views/PublicKeepDetails.vue";
 // @ts-ignore
 import PrivateKeepDetails from "./views/PrivateKeepDetails.vue";
+// @ts-ignore
+import InformationUsers from "./views/InformationUsers.vue";
 import { authGuard } from "@bcwdev/auth0-vue";
 
 Vue.use(Router);
@@ -77,6 +79,11 @@ export default new Router({
       path: "/private/:id",
       name: "privateKeepDetails",
       component: PrivateKeepDetails
+    },
+    {
+      path: "/information/users",
+      name: "informationuser",
+      component: InformationUsers
     }
   ]
 });
