@@ -97,7 +97,6 @@ export default new Vuex.Store({
     async deletePublicKeep({ commit, dispatch }, id) {
       try {
         let res = await api.delete("keeps/public/" + id);
-        console.log(id);
         dispatch("getPublicKeeps");
       } catch (error) {
         console.error(error);
