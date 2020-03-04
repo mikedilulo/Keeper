@@ -23,15 +23,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <router-link :to="{ name: 'informationuser' }" class="nav-link active mr-4">Users</router-link>
-              <li class="nav-item active mr-4">
-                <a class="nav-link" href="#">Legal</a>
-              </li>
-              <li class="nav-item active mr-4">
-                <a class="nav-link" href="#">Policies</a>
-              </li>
-              <li class="nav-item active mr-4">
-                <a class="nav-link" href="#">Hottest Keeps</a>
-              </li>
+              <router-link :to="{ name: 'informationlegal' }" class="nav-link active mr-4">Legal</router-link>
+              <router-link :to="{ name: 'informationpolicy' }" class="nav-link active mr-4">Policy</router-link>
+              <router-link
+                :to="{ name: 'informationhottestkeeps' }"
+                class="nav-link active mr-4"
+              >Hottest Keeps</router-link>
             </ul>
           </div>
         </nav>

@@ -22,6 +22,13 @@ import PublicKeepDetails from "./views/PublicKeepDetails.vue";
 import PrivateKeepDetails from "./views/PrivateKeepDetails.vue";
 // @ts-ignore
 import InformationUsers from "./views/InformationUsers.vue";
+// @ts-ignore
+import InformationLegal from "./views/InformationLegal.vue";
+// @ts-ignore
+import InformationPolicy from "./views/InformationPolicy.vue";
+// @ts-ignore
+import InformationHottestKeeps from "./views/InformationHottestKeeps.vue";
+// @ts-ignore
 import { authGuard } from "@bcwdev/auth0-vue";
 
 Vue.use(Router);
@@ -84,6 +91,21 @@ export default new Router({
       path: "/information/users",
       name: "informationuser",
       component: InformationUsers
+    },
+    {
+      path: "/information/legal",
+      name: "informationlegal",
+      component: InformationLegal
+    },
+    {
+      path: "/information/policy",
+      name: "informationpolicy",
+      component: InformationPolicy
+    },
+    {
+      path: "/information/hottestkeeps",
+      name: "informationhottestkeeps",
+      component: InformationHottestKeeps
     }
   ]
 });
