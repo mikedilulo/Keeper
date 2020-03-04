@@ -8,7 +8,9 @@
               <i class="fas fa-pager"></i>
             </h1>
             <p class="card-text">Click the button below to navigate to the Keep FAQ</p>
-            <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Keep FAQ</a>
+            <router-link :to="{name: 'questionskeep'}">
+              <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Keep FAQ</a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -19,7 +21,9 @@
               <i class="fas fa-box"></i>
             </h1>
             <p class="card-text">Click the button below to navigate to the Vault FAQ</p>
-            <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Vault FAQ</a>
+            <router-link :to="{name: 'questionsvault'}">
+              <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Vault FAQ</a>
+            </router-link>
           </div>
         </div>
       </div>

@@ -29,6 +29,18 @@ import InformationPolicy from "./views/InformationPolicy.vue";
 // @ts-ignore
 import InformationHottestKeeps from "./views/InformationHottestKeeps.vue";
 // @ts-ignore
+import QuestionsKeep from "./views/QuestionsKeep.vue";
+// @ts-ignore
+import QuestionsVault from "./views/QuestionsVault.vue";
+// @ts-ignore
+import QuestionsStorage from "./views/QuestionsStorage.vue";
+// @ts-ignore
+import QuestionsShare from "./views/QuestionsShare.vue";
+// @ts-ignore
+import QuestionsTrending from "./views/QuestionsTrending.vue";
+// @ts-ignore
+import QuestionsPrivacy from "./views/QuestionsPrivacy.vue";
+// @ts-ignore
 import { authGuard } from "@bcwdev/auth0-vue";
 
 Vue.use(Router);
@@ -106,6 +118,36 @@ export default new Router({
       path: "/information/hottestkeeps",
       name: "informationhottestkeeps",
       component: InformationHottestKeeps
+    },
+    {
+      path: "/questions/keep",
+      name: "questionskeep",
+      component: QuestionsKeep
+    },
+    {
+      path: "/questions/vault",
+      name: "questionsvault",
+      component: QuestionsVault
+    },
+    {
+      path: "/questions/storage",
+      name: "questionsstorage",
+      component: QuestionsStorage
+    },
+    {
+      path: "/questions/share",
+      name: "questionsshare",
+      component: QuestionsShare
+    },
+    {
+      path: "/questions/trending",
+      name: "questionstrending",
+      component: QuestionsTrending
+    },
+    {
+      path: "/questions/privacy",
+      name: "questionsprivacy",
+      component: QuestionsPrivacy
     }
   ]
 });
