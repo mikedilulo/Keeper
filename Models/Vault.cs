@@ -10,5 +10,6 @@ namespace Keepr.Models
     public string Description { get; set; }
     public string Img { get; set; }
     public DateTime TimeStamp { get; }
+    public int Views { get; set; }
   }
 }
