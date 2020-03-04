@@ -150,21 +150,13 @@
           <div class="modal-body">
             <form>
               <div class="form-group">
-                <label for="created-name" class="col-form-label">Created By:</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="created-name"
-                  placeholder="Enter Email"
-                />
-              </div>
-              <div class="form-group">
                 <label for="vault-name" class="col-form-label">Vault Name:</label>
                 <input
                   type="text"
                   class="form-control"
                   id="vault-name"
                   placeholder="Enter Vault Name"
+                  v-model="newVault.name"
                 />
               </div>
               <div class="form-group">
@@ -174,6 +166,7 @@
                   class="form-control"
                   id="vault-description"
                   placeholder="Enter Vault Description"
+                  v-model="newVault.description"
                 />
               </div>
               <div class="form-group">
@@ -183,9 +176,10 @@
                   class="form-control"
                   id="vault-image"
                   placeholder="Enter Vault URL"
+                  v-model="newVault.img"
                 />
               </div>
-              <button type="button" class="btn btn-primary">Create Vault</button>
+              <button type="button" class="btn btn-primary" @click="createVault">Create Vault</button>
             </form>
           </div>
           <div class="modal-footer">
@@ -216,6 +210,11 @@ export default {
         shares: 0,
         keeps: 0,
         createdBy: ""
+      },
+      newVault: {
+        name: "",
+        description: "",
+        img: ""
       }
     };
   },
@@ -240,6 +239,15 @@ export default {
         shares: "",
         keeps: "",
         createdBy: ""
+      };
+    },
+    createVault() {
+      let newVault = { ...this.newVault };
+      this.$store.dispatch("createVault", newVault);
+      this.newVault = {
+        name: "",
+        description: "",
+        img: ""
       };
     }
   }

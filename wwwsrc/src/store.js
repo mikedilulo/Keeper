@@ -46,7 +46,7 @@ export default new Vuex.Store({
     setVaults(state, data) {
       state.vaults = data;
     },
-    createvault(state, data) {
+    createVault(state, data) {
       state.vaults.push(data);
     },
     setActiveVault(state, vault) {
