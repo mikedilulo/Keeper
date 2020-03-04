@@ -43,7 +43,7 @@
         data-target="#modalKeeps"
       >Create Keep</button>
       <button
-        v-if="this.$route.name == 'dashboard'"
+        v-if="this.$route.name == 'vaults'"
         class="btn btn-outline-primary btn-sm mr-5"
         type="button"
         data-toggle="modal"
