@@ -11,7 +11,7 @@
               <button class="btn btn-dark btn-sm">
                 <i class="fas fa-eye"></i>
               </button>
-              <button class="btn btn-danger btn-sm" @click="deleteVault(vaultData.id)">
+              <button class="btn btn-dark btn-sm" @click="deleteVault(vaultData.id)">
                 <i class="fas fa-trash"></i>
               </button>
             </div>
