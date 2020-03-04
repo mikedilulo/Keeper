@@ -14,8 +14,8 @@
                 aria-expanded="false"
               ></button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div>
-                  <button class="dropdown-item"></button>
+                <div v-for="vault in vaults" :key="vault.id">
+                  <button class="dropdown-item">{{vault.name}}</button>
                 </div>
               </div>
             </div>
@@ -47,9 +47,13 @@
 </template>
 
 <script>
+import vault from "@/components/VaultComponent.vue";
 export default {
   name: "keepcomponent",
-  props: ["keepData"],
+  mounted() {
+    this.$store.dispatch("getAllVaults");
+  },
+  props: ["keepData", "vaultData"],
   methods: {
     deleteKeep(id) {
       this.$store.dispatch("deletePublicKeep", id);
@@ -61,6 +65,14 @@ export default {
       this.keepData.views++;
       this.$store.dispatch("editPublicKeep", publicKeep);
     }
+  },
+  computed: {
+    vaults() {
+      return this.$store.state.vaults;
+    }
+  },
+  components: {
+    vault
   }
 };
 </script>
