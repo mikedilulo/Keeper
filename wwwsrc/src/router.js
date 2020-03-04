@@ -41,6 +41,8 @@ import QuestionsTrending from "./views/QuestionsTrending.vue";
 // @ts-ignore
 import QuestionsPrivacy from "./views/QuestionsPrivacy.vue";
 // @ts-ignore
+import Vault from "./views/Vault.vue";
+// @ts-ignore
 import { authGuard } from "@bcwdev/auth0-vue";
 
 Vue.use(Router);
@@ -148,6 +150,11 @@ export default new Router({
       path: "/questions/privacy",
       name: "questionsprivacy",
       component: QuestionsPrivacy
+    },
+    {
+      path: "/vaults",
+      name: "vaults",
+      component: Vault
     }
   ]
 });
