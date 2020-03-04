@@ -5,7 +5,7 @@
         <div class="card vault-card mt-3" style="width: 18rem;">
           <img :src="vaultData.img" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title">{{vaultData.title}}</h5>
+            <h5 class="card-title">{{vaultData.name}}</h5>
             <p class="card-text">{{vaultData.description}}</p>
             <div class="d-flex justify-content-between">
               <button class="btn btn-dark btn-sm">
