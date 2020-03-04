@@ -60,7 +60,9 @@
               <i class="fas fa-fire"></i>
             </h1>
             <p class="card-text">Click the button below to navigate to the Trending FAQ</p>
-            <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Trending FAQ</a>
+            <router-link :to="{name: 'questionstrending'}">
+              <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Trending FAQ</a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -71,7 +73,9 @@
               <i class="fas fa-user-secret"></i>
             </h1>
             <p class="card-text">Click the button below to navigate to the Privacy FAQ</p>
-            <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Privacy FAQ</a>
+            <router-link :to="{name: 'questionsprivacy'}">
+              <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Privacy FAQ</a>
+            </router-link>
           </div>
         </div>
       </div>
