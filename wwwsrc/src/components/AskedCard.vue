@@ -34,7 +34,9 @@
               <i class="fas fa-warehouse"></i>
             </h1>
             <p class="card-text">Click the button below to navigate to the Storage FAQ</p>
-            <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Storage FAQ</a>
+            <router-link :to="{name: 'questionsstorage'}">
+              <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Storage FAQ</a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -45,7 +47,9 @@
               <i class="fas fa-share-square"></i>
             </h1>
             <p class="card-text">Click the button below to navigate to the Shares FAQ</p>
-            <a href="#" class="btn btn-dark d-flex justify-content-center">Go Shares FAQ</a>
+            <router-link :to="{name: 'questionsshare'}">
+              <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Shares FAQ</a>
+            </router-link>
           </div>
         </div>
       </div>
