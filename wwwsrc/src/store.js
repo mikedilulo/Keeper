@@ -20,7 +20,8 @@ export default new Vuex.Store({
     publicKeeps: [],
     privateKeeps: [],
     activePublicKeep: {},
-    activePrivateKeep: {}
+    activePrivateKeep: {},
+    vaults: []
   },
   mutations: {
     setPublicKeeps(state, data) {
@@ -40,6 +41,12 @@ export default new Vuex.Store({
     },
     setPrivateActiveKeep(state, keep) {
       state.activePrivateKeep = keep;
+    },
+    setVaults(state, data) {
+      state.vaults = data;
+    },
+    createvault(state, data) {
+      state.vaults.push(data);
     }
   },
   actions: {
@@ -131,7 +138,26 @@ export default new Vuex.Store({
       } catch (error) {
         console.error(error);
       }
+    },
+    // #region VAULTS
+
+    async getAllVaults({ commit, dispatch }) {
+      try {
+        let res = await api.get("vaults/private");
+        commit("setVaults", res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async createVault({ commit, dispatch }, payload) {
+      try {
+        let res = await api.post("vaults", payload);
+        commit("createVault", res.data);
+      } catch (error) {
+        console.error(error);
+      }
     }
+    // #endregion
     // #endregion
   }
 });
