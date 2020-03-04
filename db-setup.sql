@@ -21,7 +21,6 @@ USE keeper007;
 --     name VARCHAR(100) NOT NULL,
 --     description VARCHAR(255) NOT NULL,
 --     img VARCHAR(255) NOT NULL,
---     createdBy VARCHAR(100) NOT NULL,
 --     timeStamp DATETIME,
 --     userId VARCHAR(255),
 --     INDEX userId(userId),
