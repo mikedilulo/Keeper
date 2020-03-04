@@ -16,7 +16,7 @@ namespace Keepr.Repositories
 
     internal IEnumerable<Vault> GetVaultsByUserId(string userId)
     {
-      string sql = "SELECT * FROM vaults AND userId = @UserId;";
+      string sql = "SELECT * FROM vaults;";
       return _db.Query<Vault>(sql, userId);
     }
 
@@ -30,9 +30,9 @@ namespace Keepr.Repositories
     {
       string sql = @"
       INSERT INTO vaults
-      (userId, name, description, img, createdBy, timeStamp)
+      (userId, name, description, img, timeStamp)
       VALUES
-      (@UserId, @Name, @Description, @Img, @CreatedBy, @TimeStamp);
+      (@UserId, @Name, @Description, @Img, @TimeStamp);
       SELECT LAST_INSERT_ID();
       ";
       int id = _db.ExecuteScalar<int>(sql, newVault);
@@ -48,7 +48,6 @@ namespace Keepr.Repositories
       name = @Name,
       description = @Description,
       img = @Img,
-      createdBy = @CreatedBy,
       timeStamp = @TimeStamp
       WHERE (id = @id AND userId = @UserId)";
       _db.Execute(sql, newEditedVault);
