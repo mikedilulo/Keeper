@@ -16,16 +16,17 @@ USE keeper007;
 --     PRIMARY KEY (id)
 -- );
 
--- CREATE TABLE vaults(
---     id int AUTO_INCREMENT NOT NULL,
---     name VARCHAR(100) NOT NULL,
---     description VARCHAR(255) NOT NULL,
---     img VARCHAR(255) NOT NULL,
---     timeStamp DATETIME,
---     userId VARCHAR(255),
---     INDEX userId(userId),
---     PRIMARY KEY (id)
--- );
+CREATE TABLE vaults(
+    id int AUTO_INCREMENT NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    img VARCHAR(255) NOT NULL,
+    views INT DEFAULT 0,
+    timeStamp DATETIME,
+    userId VARCHAR(255),
+    INDEX userId(userId),
+    PRIMARY KEY (id)
+);
 
 -- SELECT * FROM keeps;
 -- SELECT * FROM vaults;

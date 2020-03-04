@@ -214,7 +214,8 @@ export default {
       newVault: {
         name: "",
         description: "",
-        img: ""
+        img: "",
+        views: 0
       }
     };
   },
@@ -247,7 +248,8 @@ export default {
       this.newVault = {
         name: "",
         description: "",
-        img: ""
+        img: "",
+        views: ""
       };
     }
   }
