@@ -31,5 +31,20 @@ namespace Keepr.Controllers
         return BadRequest(e.Message);
       }
     }
+    [HttpPost]
+    [Authorize]
+    public ActionResult<VaultKeep> Create([FromBody] VaultKeep vaultKeepData)
+    {
+      try
+      {
+        var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        vaultKeepData.UserId = userId;
+        return Ok(_vks.CreateVaultKeep(vaultKeepData));
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      }
+    }
   }
 }
