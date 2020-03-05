@@ -210,7 +210,7 @@ export default new Vuex.Store({
     },
     async getVaultKeepByVaultId({ commit, dispatch }, vaultId) {
       try {
-        let res = await api.get("vaultkeeps" + vaultId + "/keeps");
+        let res = await api.get("vaultkeeps/" + vaultId + "/keeps");
         commit("setVaultKeep", res.data);
       } catch (error) {
         console.error(error);

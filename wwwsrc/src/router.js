@@ -159,7 +159,7 @@ export default new Router({
       component: Vault
     },
     {
-      path: "/private/:id",
+      path: "/vaultkeeps/:id/keeps",
       name: "vaultdetails",
       component: VaultDetails
     }
