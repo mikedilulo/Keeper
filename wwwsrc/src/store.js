@@ -26,6 +26,7 @@ export default new Vuex.Store({
     activeVault: {}
   },
   mutations: {
+    // #region KEEP MUTATIONS
     setPublicKeeps(state, data) {
       state.publicKeeps = data;
     },
@@ -44,6 +45,8 @@ export default new Vuex.Store({
     setPrivateActiveKeep(state, keep) {
       state.activePrivateKeep = keep;
     },
+    // #endregion
+    // #region VAULTS MUTATIONS
     setVaults(state, data) {
       state.vaults = data;
     },
@@ -53,21 +56,25 @@ export default new Vuex.Store({
     setActiveVault(state, vault) {
       state.activeVault = vault;
     },
+    // #endregion
+    // #region VAULTKEEPS MUTATIONS
     createVaultKeep(state, data) {
       state.vaultKeeps.push(data);
     },
     setVaultKeep(state, vaultKeeps) {
       state.vaultKeeps = vaultKeeps;
     }
+    // #endregion
   },
   actions: {
+    // #region BEARER
     setBearer({}, bearer) {
       api.defaults.headers.authorization = bearer;
     },
     resetBearer() {
       api.defaults.headers.authorization = "";
     },
-
+    // #endregion
     // #region KEEPS
     async getPublicKeeps({ commit, dispatch }) {
       try {
@@ -149,6 +156,7 @@ export default new Vuex.Store({
         console.error(error);
       }
     },
+    // #endregion
     // #region VAULTS
     async getAllVaults({ commit, dispatch }) {
       try {
@@ -190,8 +198,8 @@ export default new Vuex.Store({
         console.error(error);
       }
     },
+    // #endregion
     // #region VAULTKEEPS
-
     async createVaultKeep({ commit, dispatch }, payload) {
       try {
         let res = await api.post("vaultkeeps", payload);
@@ -219,8 +227,6 @@ export default new Vuex.Store({
         console.error(error);
       }
     }
-    // #endregion
-    // #endregion
     // #endregion
   }
 });
