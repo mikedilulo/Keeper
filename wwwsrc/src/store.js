@@ -19,10 +19,10 @@ export default new Vuex.Store({
   state: {
     publicKeeps: [],
     privateKeeps: [],
-    activePublicKeep: {},
-    activePrivateKeep: {},
     vaults: [],
     vaultKeeps: [],
+    activePublicKeep: {},
+    activePrivateKeep: {},
     activeVault: {}
   },
   mutations: {
