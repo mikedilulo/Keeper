@@ -76,7 +76,7 @@
                   type="text"
                   class="form-control"
                   id="created-name"
-                  placeholder="Enter Email"
+                  placeholder="Enter nickname or email"
                   v-model="newKeep.createdBy"
                 />
               </div>
