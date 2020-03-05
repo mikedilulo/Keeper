@@ -159,6 +159,7 @@ export default new Router({
       component: Vault
     },
     {
+      // ValtKeeps Path
       path: "/vaultkeeps/:id/keeps",
       name: "vaultdetails",
       component: VaultDetails
