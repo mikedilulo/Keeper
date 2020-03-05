@@ -26,7 +26,7 @@
               <input
                 class="form-control mr-sm-2"
                 type="search"
-                placeholder="Search Keeper..."
+                placeholder="Search Topics...."
                 aria-label="Search"
               />
               <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
