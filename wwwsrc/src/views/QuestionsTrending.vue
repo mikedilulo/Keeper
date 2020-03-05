@@ -9,7 +9,7 @@
           >TRENDING FREQUENTLY ASKED QUESTIONS(FAQ)</h1>
           <div class="d-flex justify-content-around">
             <h5 class="questionhead mt-5">
-              <strong>How do I create a vault?</strong>
+              <strong>How do I know if my keep is trending?</strong>
             </h5>
             <button class="btn btn-none mt-5 pt-0" @click="displayTwentysixAnswer()">
               <i class="fas fa-caret-down text-danger questiondrop"></i>
@@ -19,14 +19,14 @@
             <p
               id="divtwentysix"
               class="paragraphalign mt-4"
-            >After you login to Keeper, You will be prompted with two links in your navbar of where you want to go. When you click on My-Keep-Dashboard, a button will appear that is called "My Vaults". When you click on this button a modal will appear prompting you to input the information. Make sure you fill out all of the input fields for desired creation of a Vault. After you click Create Vault at the bottom of the form, you will see your vault display to the page you are on. Vaults will only will display on the My-Vaults page.</p>
+            >Currently there is no way to know if your keep is trending. In the future we will be implementing an icon letting you know that your keep is trending. You will also be notified by the email you register with when we implement that feature.</p>
           </div>
           <hr class="trendinghr" />
         </div>
         <div class="col-md-12">
           <div class="d-flex justify-content-around">
             <h5 class="questionhead mt-5">
-              <strong>How do I delete a vault?</strong>
+              <strong>What happens when my keep is trending?</strong>
             </h5>
             <button class="btn btn-none mt-5 pt-0" @click="displayTwentysevenAnswer()">
               <i class="fas fa-caret-down text-danger questiondrop"></i>
@@ -36,14 +36,14 @@
             <p
               id="divtwentyseven"
               class="paragraphalign mt-4"
-            >After you have created a vault, you will see it display on the My-Vaults page. At the bottom of the vault underneath the description will be two buttons. One to view the keeps inside of the vault and the other to delete it. Once you delete the vault, be aware you will not get the vault back, and will have to recreate a new vault. The vaults you create are only private to you.</p>
+            >In future implementation of a trending status, you will be notified via email and an icon will show on your keep to let you know that it is trending. You're keep if trending will show up on the "Hottest Keeps" section of this application.</p>
           </div>
           <hr class="trendinghr" />
         </div>
         <div class="col-md-12">
           <div class="d-flex justify-content-around">
             <h5 class="questionhead mt-5">
-              <strong>What happens to my keeps inside if I delete a vault?</strong>
+              <strong>Can I have more than one keep trending at a time?</strong>
             </h5>
             <button class="btn btn-none mt-5 pt-0" @click="displayTwentyeightAnswer()">
               <i class="fas fa-caret-down text-danger questiondrop"></i>
@@ -53,14 +53,14 @@
             <p
               id="divtwentyeight"
               class="paragraphalign mt-4"
-            >If your keeps are public when you first created them, you will be able to still see all of your keeps on the dashboard and home page. If your keeps are private when created, you will still be able to view them in the Private-Keeps Page of the user who is logged in. If you have a keep shared from somebody, and it is in the vault, it will be removed unless it is saved on another page in your dashboard.</p>
+            >Yes with future implementation of trending keeps it will be very possible that you can have more than one keep trending. You will continue to be notified and updated if your keeps are trending. Look for them in the "Hottest Keeps" section of the application. Brag and show your friends.</p>
           </div>
           <hr class="trendinghr" />
         </div>
         <div class="col-md-12">
           <div class="d-flex justify-content-around">
             <h5 class="questionhead mt-5">
-              <strong>Is there a default img if I dont have one?</strong>
+              <strong>Does anything happen when my keep is trending?</strong>
             </h5>
             <button class="btn btn-none mt-5 pt-0" @click="displayTwentynineAnswer()">
               <i class="fas fa-caret-down text-danger questiondrop"></i>
@@ -70,14 +70,14 @@
             <p
               id="divtwentynine"
               class="paragraphalign mt-4"
-            >When you first go to create a vault, you will be prompted with four input fields. Please ensure that you input all of the fields correctly so it can be displayed on the vault. If your URL is too long than it will not work, you will have to find a shorter URL to input in the form and have it create the vault. Currently there is no way to have a default picture, you will need to input one if you want to have it tailored to your likes.</p>
+            >There will be three things that happen when your keep is trending. You will be notified via email with the registered email, you will have an icon on your keep letting you know its trending, and you will see your keep in the "Hottest Keeps" section of the application.</p>
           </div>
           <hr class="trendinghr" />
         </div>
         <div class="col-md-12">
           <div class="d-flex justify-content-around">
             <h5 class="questionhead mt-5">
-              <strong>What is the vault view?</strong>
+              <strong>Can I have a keep trend more than once?</strong>
             </h5>
             <button class="btn btn-none mt-5 pt-0" @click="displayThirtyAnswer()">
               <i class="fas fa-caret-down text-danger questiondrop"></i>
@@ -87,7 +87,7 @@
             <p
               id="divthirty"
               class="paragraphalign mt-4"
-            >This is just a simple tracker to let you know how many times you have looked inside of the vault at the keeps. This count will go up when you click the details button at the bottom left of the keep. It can keep track over time, and with an implemented upcoming feature it will display your top viewed vaults so its easier for you as the user to navigate to the keeps you really want to look at.</p>
+            >Currently there is not a way for your keeps to trend more than once. With future implementation of trending keeps, we will look to ensure that if your keep is a hot commodity, that it is trending more than once.</p>
           </div>
           <hr class="trendinghr" />
         </div>
