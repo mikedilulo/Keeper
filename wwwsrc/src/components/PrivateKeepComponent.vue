@@ -31,9 +31,6 @@
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
               </router-link>
-              <button class="btn btn-dark btn-sm button">
-                <i class="fas fa-unlock"></i>
-              </button>
               <button
                 type="submit"
                 class="btn btn-dark btn-sm button"
