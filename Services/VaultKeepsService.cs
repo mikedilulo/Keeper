@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Keepr.Models;
 using Keepr.Repositories;
 
@@ -12,19 +13,25 @@ namespace Keepr.Services
       _vkrepo = vkrepo;
     }
 
-    internal object GetKeepsByVaultId(int vaultId, string userId)
+    internal IEnumerable<Keep> GetKeepsByVaultId(int vaultId, string userId)
     {
-      throw new NotImplementedException();
+      return _vkrepo.GetKeepsByVaultId(vaultId, userId);
     }
 
-    internal object CreateVaultKeep(VaultKeep vaultKeepData)
+    internal VaultKeep CreateVaultKeep(VaultKeep vaultKeepData)
     {
-      throw new NotImplementedException();
+      VaultKeep exists = _vkrepo.Find(vaultKeepData.VaultId, vaultKeepData.KeepId);
+      if (exists != null) { throw new Exception("Invalid: VaultKeep Relationship Already Exists"); }
+      vaultKeepData.Id = _vkrepo.CreateVaultKeep(vaultKeepData);
+      return vaultKeepData;
     }
 
-    internal object DeleteKeepByVaultId(int keepId, int vaultId, string userId)
+    internal object DeleteVaultKeepByVaultId(int keepId, int vaultId, string userId)
     {
-      throw new NotImplementedException();
+      VaultKeep exists = _vkrepo.Find(keepId, vaultId);
+      if (exists == null) { throw new Exception("Invalid : There Is No VaultKeep To Delete"); }
+      _vkrepo.DeleteVaultKeepByVaultId(keepId, vaultId, userId);
+      return "Successfully Deleted Vault Keep";
     }
   }
 }
