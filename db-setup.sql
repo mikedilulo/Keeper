@@ -46,14 +46,14 @@ USE keeper007;
 --   ON DELETE CASCADE
 -- );
 
+-- SELECT * FROM vaultkeeps;
 -- SELECT * FROM keeps;
 -- SELECT * FROM vaults;
--- SELECT * FROM vaultkeeps;
 
+-- TRUNCATE TABLE vaultkeeps;
 -- TRUNCATE TABLE keeps;
 -- TRUNCATE TABLE vaults;
--- TRUNCATE TABLE vaultkeeps;
 
+-- DROP TABLE vaultkeeps;
 -- DROP TABLE keeps;
 -- DROP TABLE vaults;
--- DROP TABLE vaultkeeps;
