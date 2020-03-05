@@ -68,7 +68,7 @@
             <p
               id="divfour"
               class="paragraphalign mt-4"
-            >After you login to Keeper, You will be prompted with two links in your navbar of where you want to go. When you click on My-Keep-Dashboard, a button will appear called "Create Keep". When you click on this button a modal will appear prompting you to input the information. Make sure you fill out all of the input fields for desired creation of Keep. After you click Create Keep at the bottom of the form, you will see your keep display to the page you are on. Public Keeps will display on the dashboard and home page, while your private keeps will only display in the private keeps page.</p>
+            >After you have successfully created a keep, and you see it displayed on your home page and dashboard. You have a couple of options. In desktop view you can hover over the keep with your mouse, upon hovering you will see a dropdown menu at the top left of the keep. Click on the dropdown button and it will display a list of vaults you created. In mobile, you will tap the keep with your finger, and the buttons will display. Select the dropdown button in the top left of the keep and it will display a list of vaults that you have created.</p>
           </div>
           <hr class="questionhr" />
         </div>
