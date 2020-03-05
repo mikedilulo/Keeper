@@ -182,7 +182,18 @@ export default new Vuex.Store({
       } catch (error) {
         console.error(error);
       }
+    },
+    // #region VAULTKEEPS
+
+    async createVaultKeep({ commit, dispatch }, payload) {
+      try {
+        let res = await api.post("vaultkeeps", payload);
+        commit("createVaultKeep", res.data);
+      } catch (error) {
+        console.error(error);
+      }
     }
+    // #endregion
     // #endregion
     // #endregion
   }
