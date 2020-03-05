@@ -51,7 +51,7 @@
             <p
               id="divthree"
               class="paragraphalign mt-4"
-            >After you login to Keeper, You will be prompted with two links in your navbar of where you want to go. When you click on My-Keep-Dashboard, a button will appear called "Create Keep". When you click on this button a modal will appear prompting you to input the information. Make sure you fill out all of the input fields for desired creation of Keep. After you click Create Keep at the bottom of the form, you will see your keep display to the page you are on. Public Keeps will display on the dashboard and home page, while your private keeps will only display in the private keeps page.</p>
+            >Prior to creating a keep, you will have the option at the bottom of the form to select whether or not you want the keep to be private. When you make a keep private, it will not display on the home page or dashboard. It will only display in the private keep page of the user. Implemented feature coming soon is you will be able to make the keep public if you so choose. Stay updated with us for more details.</p>
           </div>
           <hr class="questionhr" />
         </div>
