@@ -35,14 +35,14 @@ USE keeper007;
 --   vaultId int NOT NULL,
 --   PRIMARY KEY (id),
 --   INDEX(vaultId, keepId),
---   INDEX(userId)
+--   INDEX(userId),
 
 --   FOREIGN KEY(vaultId)
---   REFERENCES vaults(id),
+--   REFERENCES vaults(id)
 --   ON DELETE CASCADE,
 
 --   FOREIGN KEY(keepId)
---   REFERENCES keeps(id),
+--   REFERENCES keeps(id)
 --   ON DELETE CASCADE
 -- );
 
