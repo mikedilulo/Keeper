@@ -8,9 +8,11 @@
             <h5 class="card-title">{{vaultData.name}}</h5>
             <p class="card-text">{{vaultData.description}}</p>
             <div class="d-flex justify-content-between">
-              <button class="btn btn-dark btn-sm">
-                <i class="fas fa-eye"></i>
-              </button>
+              <router-link :to="{name: 'vaultdetails', params: {id: vaultData.id}}">
+                <button type="button" class="btn btn-dark btn-sm">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </router-link>
               <button class="btn btn-dark btn-sm" @click="deleteVault(vaultData.id)">
                 <i class="fas fa-trash"></i>
               </button>
