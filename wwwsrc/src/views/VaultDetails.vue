@@ -1,12 +1,16 @@
 <template>
-  <div class="vaultdetai">
-    <h5>HELLO WORLD</h5>
+  <div class="vaultdetails">
+    <keepdetailnav />
   </div>
 </template>
 
 <script>
+import keepdetailnav from "@/components/KeepDetailNavbar.vue";
 export default {
-  name: "vaultdetails"
+  name: "vaultdetails",
+  components: {
+    keepdetailnav
+  }
 };
 </script>
 

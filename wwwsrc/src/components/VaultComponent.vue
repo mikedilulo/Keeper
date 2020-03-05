@@ -37,7 +37,4 @@ export default {
 </script>
 
 <style>
-.vault-card {
-  border: 1px solid black;
-}
 </style>
