@@ -174,6 +174,14 @@ export default new Vuex.Store({
       } catch (error) {
         console.error(error);
       }
+    },
+    async editPrivateVault({ commit, dispatch }, vault) {
+      try {
+        let res = await api.put("vaults/private/" + vault.id, vault);
+        dispatch("getAllVaults");
+      } catch (error) {
+        console.error(error);
+      }
     }
     // #endregion
     // #endregion
