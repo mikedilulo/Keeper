@@ -4,7 +4,7 @@
     <div class="questionskeep container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="mt-5 d-flex justify-content-center mb-5">FREQUENTLY ASKED QUESTIONS(FAQ)</h1>
+          <h1 class="mt-5 d-flex justify-content-center mb-5">KEEP FREQUENTLY ASKED QUESTIONS(FAQ)</h1>
           <div class="d-flex justify-content-around">
             <h5 class="questionhead mt-5">
               <strong>How do I create a keep?</strong>
@@ -85,9 +85,22 @@
             <p
               id="divfive"
               class="paragraphalign mt-4"
-            >After you login to Keeper, You will be prompted with two links in your navbar of where you want to go. When you click on My-Keep-Dashboard, a button will appear called "Create Keep". When you click on this button a modal will appear prompting you to input the information. Make sure you fill out all of the input fields for desired creation of Keep. After you click Create Keep at the bottom of the form, you will see your keep display to the page you are on. Public Keeps will display on the dashboard and home page, while your private keeps will only display in the private keeps page.</p>
+            >After you have added a keep successfully to a vault, you will see the keep inside of the vault. When you go to hover over the keep with the mouse, or press the keep (mobile) you will see an extra button that has appeared. This button when clicked will remove the keep from the vault. This will not delete the keep, it will only remove it from the vault. You will still see your keep on the dashboard and home page after performing this action.</p>
           </div>
           <hr class="questionhr" />
+        </div>
+        <div class="col-md-11 mt-5 d-flex justify-content-between mb-2">
+          <div class="col-md-2">
+            <p>
+              <strong>@Keeper2020</strong>
+            </p>
+          </div>
+          <div class="col-md-8 d-flex justify-content-around">
+            <a class="fab fa-facebook-square text-dark" href="https://www.facebook.com"></a>
+            <a class="fab fa-twitter-square text-dark" href="https://www.twitter.com"></a>
+            <a class="fab fa-linkedin text-dark" href="https://www.linkedin.com"></a>
+            <a class="fab fa-github-square text-dark" href="https://www.github.com"></a>
+          </div>
         </div>
       </div>
     </div>
