@@ -15,7 +15,7 @@
               ></button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <div v-for="vault in vaults" :key="vault.id">
-                  <button class="dropdown-item">{{vault.name}}</button>
+                  <button class="dropdown-item" @click="addKeepToVault(vault.id)">{{vault.name}}</button>
                 </div>
               </div>
             </div>
@@ -64,6 +64,12 @@ export default {
     publicKeepViews(publicKeep) {
       this.keepData.views++;
       this.$store.dispatch("editPublicKeep", publicKeep);
+    },
+    addKeepToVault(id) {
+      this.$store.dispatch("createVaultKeep", {
+        vaultId: id,
+        keepId: this.keepData.id
+      });
     }
   },
   computed: {
