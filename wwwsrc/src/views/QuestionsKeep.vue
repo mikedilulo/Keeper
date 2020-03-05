@@ -10,7 +10,7 @@
               <strong>How do I create a keep?</strong>
             </h5>
             <button class="btn btn-none mt-5 pt-0" @click="displayOneAnswer()">
-              <i class="fas fa-caret-down text-danger questiondrop"></i>
+              <i class="fas fa-caret-down text-success questiondrop"></i>
             </button>
           </div>
           <div class="d-flex justify-content-center col-md-10">
@@ -27,7 +27,7 @@
               <strong>How do I delete a keep?</strong>
             </h5>
             <button class="btn btn-none mt-5 pt-0" @click="displayTwoAnswer()">
-              <i class="fas fa-caret-down text-danger questiondrop"></i>
+              <i class="fas fa-caret-down text-success questiondrop"></i>
             </button>
           </div>
           <div class="d-flex justify-content-center col-md-10">
@@ -44,7 +44,7 @@
               <strong>How do I make a keep private?</strong>
             </h5>
             <button class="btn btn-none mt-5 pt-0" @click="displayThreeAnswer()">
-              <i class="fas fa-caret-down text-danger questiondrop"></i>
+              <i class="fas fa-caret-down text-success questiondrop"></i>
             </button>
           </div>
           <div class="d-flex justify-content-center col-md-10">
@@ -61,7 +61,7 @@
               <strong>How do I add a keep to a vault?</strong>
             </h5>
             <button class="btn btn-none mt-5 pt-0" @click="displayFourAnswer()">
-              <i class="fas fa-caret-down text-danger questiondrop"></i>
+              <i class="fas fa-caret-down text-success questiondrop"></i>
             </button>
           </div>
           <div class="d-flex justify-content-center col-md-10">
@@ -78,7 +78,7 @@
               <strong>How do I remove a keep from a vault?</strong>
             </h5>
             <button class="btn btn-none mt-5 pt-0" @click="displayFiveAnswer()">
-              <i class="fas fa-caret-down text-danger questiondrop"></i>
+              <i class="fas fa-caret-down text-success questiondrop"></i>
             </button>
           </div>
           <div class="d-flex justify-content-center col-md-10">
@@ -167,7 +167,7 @@ export default {
   margin-left: 5%;
 }
 .questionhr {
-  border: 1px solid red;
+  border: 1px solid green;
   max-width: 80%;
   margin-right: 15%;
 }
