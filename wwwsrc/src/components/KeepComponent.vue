@@ -34,7 +34,7 @@
         <button
           v-if="this.$route.name == `vaultdetails`"
           class="btn btn-warning"
-          @click="removeKeepFromVault"
+          @click="removeKeepFromVault()"
         >RFV</button>
       </dd>
     </div>
@@ -50,6 +50,12 @@ export default {
   },
   props: ["keepData", "vaultData"],
   methods: {
+    removeKeepFromVault() {
+      this.$store.dispatch("deleteVaultKeepByVaultId", {
+        vaultId: this.$route.params.id,
+        keepId: this.keepData.id
+      });
+    },
     deleteKeep(id) {
       this.$store.dispatch("deletePublicKeep", id);
     },

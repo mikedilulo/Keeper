@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-4">
         <div v-for="keep in publicKeeps" :key="keep.id">
           <keepcomponent :keepData="keep" />
         </div>
