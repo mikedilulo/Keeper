@@ -3,7 +3,7 @@
     <keepdetailnav />
     <div class="vaultdetails container-fluid">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-4">
           <div v-for="keep in vaultKeeps" :key="keep.id">
             <keepcomponent :keepData="keep" />
           </div>

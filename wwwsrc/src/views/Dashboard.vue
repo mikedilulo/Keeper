@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard pr-0 pl-0">
+  <div class="dashboard container-fluid pr-0 pl-0">
     <homenav />
     <div class="col-md-4">
       <div v-for="keep in publicKeeps" :key="keep.id">
