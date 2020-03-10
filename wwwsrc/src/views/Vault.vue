@@ -1,6 +1,7 @@
 <template>
   <div class="vaults container-fluid pr-0 pl-0">
     <homenav />
+    <h1 class="d-flex justify-content-center mt-3 mb-3">Your Vaults</h1>
     <div class="vault-render container-fluid">
       <div class="row">
         <div class="col-md-12">
