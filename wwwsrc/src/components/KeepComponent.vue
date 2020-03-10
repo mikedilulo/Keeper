@@ -71,6 +71,10 @@ export default {
         vaultId: id,
         keepId: this.keepData.id
       });
+    },
+    addKeepToVault(publicKeep) {
+      this.keepData.keeps++;
+      this.$store.dispatch("editPublicKeep", publicKeep);
     }
   },
   computed: {
