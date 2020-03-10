@@ -142,7 +142,10 @@ export default new Vuex.Store({
     },
     async editPublicKeep({ commit, dispatch }, publicKeep) {
       try {
-        let res = await api.put("keeps/public/" + publicKeep.id, publicKeep);
+        let res = await api.put(
+          "keeps/public/" + publicKeep.keepId,
+          publicKeep
+        );
         dispatch("getPublicKeeps");
       } catch (error) {
         console.error(error);

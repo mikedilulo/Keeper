@@ -38,6 +38,6 @@ export default {
 
 <style>
 .card {
-  border: 1px solid black;
+  border: 1px solid black !important;
 }
 </style>

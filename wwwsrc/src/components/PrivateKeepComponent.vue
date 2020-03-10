@@ -67,6 +67,10 @@ export default {
         vaultId: id,
         keepId: this.keepData.id
       });
+    },
+    addKeepToVault(privateKeep) {
+      this.keepData.keeps++;
+      this.$store.dispatch("editPrivateKeep", privateKeep);
     }
   },
   computed: {
