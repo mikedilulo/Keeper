@@ -14,8 +14,8 @@
                 aria-expanded="false"
               ></button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <div>
-                  <button class="dropdown-item"></button>
+                <div v-for="vault in vaults" :key="vault.id">
+                  <button class="dropdown-item" @click="addKeepToVault(vault.id)">{{vault.name}}</button>
                 </div>
               </div>
             </div>
@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import vault from "@/components/VaultComponent.vue";
 export default {
   name: "privatekeepcomponent",
   props: ["keepData"],
@@ -60,7 +61,21 @@ export default {
     privateKeepViews(privateKeep) {
       this.keepData.views++;
       this.$store.dispatch("editPrivateKeep", privateKeep);
+    },
+    addKeepToVault(id) {
+      this.$store.dispatch("createVaultKeep", {
+        vaultId: id,
+        keepId: this.keepData.id
+      });
     }
+  },
+  computed: {
+    vaults() {
+      return this.$store.state.vaults;
+    }
+  },
+  components: {
+    vault
   }
 };
 </script>
