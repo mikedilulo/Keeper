@@ -12,6 +12,7 @@
         ></button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <div v-for="vault in vaults" :key="vault.id">
+            <!-- ONLY PASSING IN THE VAULT ID WITH THIS METHOD INSTEAD OF THE WHOLE KEEP OBJECT -->
             <button class="dropdown-item" @click="addKeepToVault(vault.id)">{{vault.name}}</button>
           </div>
         </div>
