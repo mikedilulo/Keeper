@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-md-12 p-0">
         <homenav />
+        <h1 class="d-flex justify-content-center mt-3 mb-3">Welcome to Keeper!</h1>
       </div>
     </div>
     <div class="row">
