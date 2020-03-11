@@ -12,13 +12,10 @@
       <div class="col-md-4 d-flex justify-content-around mb-5 mt-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center">
-              <i class="fas fa-box"></i>
-            </h1>
-            <p class="card-text">Click the button below to navigate to the Vault FAQ</p>
-            <router-link :to="{name: 'questionsvault'}">
-              <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Vault FAQ</a>
-            </router-link>
+            <h1 class="card-title d-flex justify-content-center">Users Can:</h1>
+            <p
+              class="card-text"
+            >Create vaults to store all of their created keeps, and keeps shared from other users that were created.</p>
           </div>
         </div>
       </div>
