@@ -42,13 +42,10 @@
       <div class="col-md-4 d-flex justify-content-around mt-5 mb-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center">
-              <i class="fas fa-fire"></i>
-            </h1>
-            <p class="card-text">Click the button below to navigate to the Trending FAQ</p>
-            <router-link :to="{name: 'questionstrending'}">
-              <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Trending FAQ</a>
-            </router-link>
+            <h1 class="card-title d-flex justify-content-center">Users Can:</h1>
+            <p
+              class="card-text"
+            >Subscribe to Keeper to recieve monthly updates, and newsletters. This will include trending keeps, along with other information.</p>
           </div>
         </div>
       </div>
