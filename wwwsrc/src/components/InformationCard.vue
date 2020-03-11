@@ -4,7 +4,7 @@
       <div class="col-md-4 d-flex justify-content-around mb-5 mt-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center">Users Can:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
             <p class="card-text">Create Public Keeps they can share with friends, family and users</p>
           </div>
         </div>
@@ -12,7 +12,7 @@
       <div class="col-md-4 d-flex justify-content-around mb-5 mt-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center">Users Can:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
             <p
               class="card-text"
             >Create vaults to store all of their created keeps, and keeps shared from other users that were created.</p>
@@ -22,7 +22,7 @@
       <div class="col-md-4 d-flex justify-content-around mb-5 mt-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center">Users Can:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
             <p
               class="card-text"
             >View the keep details of who it was created by, what ID the keep is, and how many times the keep has been viewed by other people.</p>
@@ -32,7 +32,7 @@
       <div class="col-md-4 d-flex justify-content-around mt-5 mb-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center">Users Can:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
             <p
               class="card-text"
             >Secure their keeps within vaults. This allows you to keep them safe if they get deleted by the original user</p>
@@ -42,7 +42,7 @@
       <div class="col-md-4 d-flex justify-content-around mt-5 mb-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center">Users Can:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
             <p
               class="card-text"
             >Subscribe to Keeper to recieve monthly updates, and newsletters. This will include trending keeps, along with other information.</p>
@@ -52,13 +52,10 @@
       <div class="col-md-4 d-flex justify-content-around mt-5 mb-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center">
-              <i class="fas fa-user-secret"></i>
-            </h1>
-            <p class="card-text">Click the button below to navigate to the Privacy FAQ</p>
-            <router-link :to="{name: 'questionsprivacy'}">
-              <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Privacy FAQ</a>
-            </router-link>
+            <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
+            <p
+              class="card-text"
+            >Create Private Keeps that only you the creator can view. Nobody will have access to these keeps.</p>
           </div>
         </div>
       </div>
