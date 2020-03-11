@@ -6,7 +6,7 @@
           <div class="card-body">
             <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
             <strong>
-              <p class="card-text">Create Public Keeps they can share with friends, family and users</p>
+              <p class="card-text">Create Public Keeps you can share with friends, family and users</p>
             </strong>
           </div>
         </div>
@@ -18,7 +18,7 @@
             <strong>
               <p
                 class="card-text"
-              >Create vaults to store all of their created keeps, and keeps shared from other users that were created.</p>
+              >Create vaults to store all of your created keeps, and keeps shared from other users that were created.</p>
             </strong>
           </div>
         </div>
@@ -42,7 +42,7 @@
             <strong>
               <p
                 class="card-text"
-              >Secure their keeps within vaults. This allows you to keep them safe if they get deleted by the original user</p>
+              >Secure your keeps within vaults. This allows you to keep them safe if they get deleted by the original user</p>
             </strong>
           </div>
         </div>
