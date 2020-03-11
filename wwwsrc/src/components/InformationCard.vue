@@ -51,9 +51,11 @@
         <div class="card" style="width: 18rem;">
           <div class="card-body">
             <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
-            <p
-              class="card-text"
-            >Subscribe to Keeper to recieve monthly updates, and newsletters. This will include trending keeps, along with other information.</p>
+            <strong>
+              <p
+                class="card-text"
+              >Subscribe to Keeper to recieve monthly updates, and newsletters. This will include trending keeps, along with other information.</p>
+            </strong>
           </div>
         </div>
       </div>
@@ -61,9 +63,11 @@
         <div class="card" style="width: 18rem;">
           <div class="card-body">
             <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
-            <p
-              class="card-text"
-            >Create Private Keeps that only you the creator can view. Nobody will have access to these keeps.</p>
+            <strong>
+              <p
+                class="card-text"
+              >Create Private Keeps that only you the creator can view. Nobody will have access to these keeps.</p>
+            </strong>
           </div>
         </div>
       </div>
