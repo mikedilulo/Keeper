@@ -23,7 +23,7 @@
 
 <script>
 import aboutnav from "@/components/AboutNavbar.vue";
-import policycard from "@/components/InformationCard.vue";
+import policycard from "@/components/PolicyCard.vue";
 export default {
   name: "informationpolicy",
   components: {

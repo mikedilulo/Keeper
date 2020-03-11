@@ -4,9 +4,11 @@
       <div class="col-md-4 d-flex justify-content-around mb-5 mt-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Public Keep Policy:</h1>
             <strong>
-              <p class="card-text">Create Public Keeps you can share with friends, family and users</p>
+              <p
+                class="card-text"
+              >Here at Keeper, public keeps are on display for everybody to see once they create an account. Please refrain from using profanity when creating your public keeps.</p>
             </strong>
           </div>
         </div>
