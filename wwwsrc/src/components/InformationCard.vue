@@ -66,7 +66,7 @@
             <strong>
               <p
                 class="card-text"
-              >Create Private Keeps that only you the creator can view. Nobody will have access to these keeps.</p>
+              >Create Private Keeps that only you the creator can view. Nobody will have access to these keeps but the creator.</p>
             </strong>
           </div>
         </div>
