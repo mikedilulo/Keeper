@@ -28,11 +28,11 @@
       <div class="col-md-4 d-flex justify-content-around mb-5 mt-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Vault Policy</h1>
             <strong>
               <p
                 class="card-text"
-              >View the keep details of who it was created by, what ID the keep is, and how many times the keep has been viewed by other people.</p>
+              >Vaults are private to each individual, please do not share information with others as they can be destructive to your data.</p>
             </strong>
           </div>
         </div>
