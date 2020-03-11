@@ -11,15 +11,24 @@
         </div>
       </div>
     </div>
+    <div class="middle container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <infocard />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import aboutnav from "@/components/AboutNavbar.vue";
+import infocard from "@/components/InformationCard.vue";
 export default {
   name: "informationuser",
   components: {
-    aboutnav
+    aboutnav,
+    infocard
   }
 };
 </script>
