@@ -64,11 +64,11 @@
       <div class="col-md-4 d-flex justify-content-around mt-5 mb-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center text-danger">Users Can:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Account Policy:</h1>
             <strong>
               <p
                 class="card-text"
-              >Create Private Keeps that only you the creator can view. Nobody will have access to these keeps but the creator.</p>
+              >If at any point somebody decides to report you for having profanity or anything vulgar in your keeps and vaults.. It will be under review and your account may be banned.</p>
             </strong>
           </div>
         </div>
