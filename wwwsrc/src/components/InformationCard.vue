@@ -22,13 +22,10 @@
       <div class="col-md-4 d-flex justify-content-around mb-5 mt-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center">
-              <i class="fas fa-warehouse"></i>
-            </h1>
-            <p class="card-text">Click the button below to navigate to the Storage FAQ</p>
-            <router-link :to="{name: 'questionsstorage'}">
-              <a href="#" class="btn btn-dark d-flex justify-content-center">Go To Storage FAQ</a>
-            </router-link>
+            <h1 class="card-title d-flex justify-content-center">Users Can:</h1>
+            <p
+              class="card-text"
+            >View the keep details of who it was created by, what ID the keep is, and how many times the keep has been viewed by other people.</p>
           </div>
         </div>
       </div>
