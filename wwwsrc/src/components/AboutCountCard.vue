@@ -16,7 +16,7 @@
           <div class="card">
             <div class="card-body number-cards">
               <h5 class="card-title numbers-about text-secondary">
-                <strong>300</strong>
+                <strong>250</strong>
               </h5>
               <p class="card-text">Keeps Created in Keeper</p>
             </div>
@@ -39,7 +39,8 @@
 
 <script>
 export default {
-  name: "aboutcount"
+  name: "aboutcount",
+  computed: {}
 };
 </script>
 
