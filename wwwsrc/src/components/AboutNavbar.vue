@@ -2,7 +2,7 @@
   <div class="aboutnav container-fluid">
     <div class="row">
       <div class="col-md-12 pl-0 pr-0">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <router-link :to="{ name: 'login' }">
             <a class="navbar-brand" href="#">
               <i class="fab fa-korvue about-nav"></i>
@@ -29,7 +29,7 @@
                 placeholder="Search Topics...."
                 aria-label="Search"
               />
-              <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
             </form>
           </div>
         </nav>
