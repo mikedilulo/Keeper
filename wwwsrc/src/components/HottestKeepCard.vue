@@ -16,11 +16,11 @@
       <div class="col-md-4 d-flex justify-content-around mb-5 mt-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center text-danger">Legal:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Trending Info:</h1>
             <strong>
               <p
                 class="card-text"
-              >Hacking is not allowed into this website. If you decide to hack into somebody's account and are reported. We will hunt you down and make sure you pay back the damages.</p>
+              >Having your keep trend is a sign that your created keep is one of the most popular on the website. You should always strive to have your keeps trending.</p>
             </strong>
           </div>
         </div>
