@@ -37,9 +37,11 @@
         </button>
         <button
           v-if="this.$route.name == `vaultdetails`"
-          class="btn btn-warning"
+          class="btn btn-dark btn-sm button"
           @click="removeKeepFromVault()"
-        >RFV</button>
+        >
+          <i class="fas fa-unlink"></i>
+        </button>
       </dd>
     </div>
   </div>
