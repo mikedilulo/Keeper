@@ -64,11 +64,11 @@
       <div class="col-md-4 d-flex justify-content-around mt-5 mb-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center text-danger">Legal:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Trending Info:</h1>
             <strong>
               <p
                 class="card-text"
-              >It is illegal to make fun of huskies in anyway shape or form on this website and towards others. If so Maya, CodeMonkey's faithful watchdog will sniff you out. Be generous to everybody.</p>
+              >It is possible to have your keeps trending more than once. Just because it was trending one week, does not mean it cannot trend the next week.</p>
             </strong>
           </div>
         </div>
