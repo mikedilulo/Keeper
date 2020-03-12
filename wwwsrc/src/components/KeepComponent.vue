@@ -13,7 +13,10 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <div v-for="vault in vaults" :key="vault.id">
             <!-- ONLY PASSING IN THE VAULT ID WITH THIS METHOD INSTEAD OF THE WHOLE KEEP OBJECT -->
-            <button class="dropdown-item" @click="addKeepToVault(vault.id)">{{vault.name}}</button>
+            <button
+              class="dropdown-item"
+              @click="addKeepToVault(vault.id, keepData.id)"
+            >{{vault.name}}</button>
           </div>
         </div>
       </div>
@@ -67,20 +70,25 @@ export default {
       this.keepData.views++;
       this.$store.dispatch("editPublicKeep", publicKeep);
     },
-    addKeepToVault(id) {
+    addKeepToVault(id, publicKeep) {
+      this.keepData.keeps++;
+      this.$store.dispatch("editPublicKeep", publicKeep);
       this.$store.dispatch("createVaultKeep", {
         vaultId: id,
         keepId: this.keepData.id
       });
-    },
-    addKeepToVault(publicKeep) {
-      this.keepData.keeps++;
-      this.$store.dispatch("editPublicKeep", publicKeep);
     }
+    // addKeepToVault(publicKeep) {
+    //   this.keepData.keeps++;
+    //   this.$store.dispatch("editPublicKeep", publicKeep);
+    // }
   },
   computed: {
     vaults() {
       return this.$store.state.vaults;
+    },
+    publicKeep() {
+      return this.$store.state.publicKeep;
     }
   },
   components: {
