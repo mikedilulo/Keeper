@@ -14,7 +14,7 @@
     <div class="middle container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <legalcard />
+          <hottestcard />
         </div>
       </div>
     </div>
@@ -23,12 +23,12 @@
 
 <script>
 import aboutnav from "@/components/AboutNavbar.vue";
-import legalcard from "@/components/LegalCard.vue";
+import hottestcard from "@/components/HottestKeepCard.vue";
 export default {
   name: "informationhottestkeeps",
   components: {
     aboutnav,
-    legalcard
+    hottestcard
   }
 };
 </script>
