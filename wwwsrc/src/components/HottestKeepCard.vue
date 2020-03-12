@@ -52,11 +52,11 @@
       <div class="col-md-4 d-flex justify-content-around mt-5 mb-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center text-danger">Legal:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Trending Info:</h1>
             <strong>
               <p
                 class="card-text"
-              >All rights are reserved to the original owner of this website. If you decide to clone or create this website you will be fined. Contact CodeMonkey about details.</p>
+              >Also check out the hottest keeps on the about page. This is where your keep will be displayed if it is infact trending and you have received a notification from the staff at Keeper.</p>
             </strong>
           </div>
         </div>
