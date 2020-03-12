@@ -40,11 +40,11 @@
       <div class="col-md-4 d-flex justify-content-around mt-5 mb-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center text-danger">Legal:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Trending Info:</h1>
             <strong>
               <p
                 class="card-text"
-              >If you violate the rights of the website, you will be arrested and tried in a court of law to determine your punishment.</p>
+              >If your keep is trending you will be notified via the email that you used to sign in and register an account with Keeper with. Keep an eye on your email, as your keep could be trending next.</p>
             </strong>
           </div>
         </div>
