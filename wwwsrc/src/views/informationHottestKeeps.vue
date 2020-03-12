@@ -7,7 +7,7 @@
           <h1 class="text-light d-flex justify-content-center mt-5">Keeper Hottest Keeps</h1>
           <p
             class="text-light d-flex justify-content-center mt-3"
-          >Please review the legalities of Keeper below. If any issues arise or are a concern, please reach out to CodeMonkey via the contact page.</p>
+          >Is your keep trending? If so, take a look down below at some of the cards that can give you answers. Having keeps trend is a great thing, so why not make it happen all the time?</p>
         </div>
       </div>
     </div>
