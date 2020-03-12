@@ -28,11 +28,11 @@
       <div class="col-md-4 d-flex justify-content-around mb-5 mt-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center text-danger">Legal:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Trending Info:</h1>
             <strong>
               <p
                 class="card-text"
-              >This is a safe and secure website for people to connect and have fun. Please do not go out of your way to ruin this experience for anybody. If you do so, you will be fined.</p>
+              >You can help your friend's keeps trend just by sharing them and liking them when you come across it.</p>
             </strong>
           </div>
         </div>
