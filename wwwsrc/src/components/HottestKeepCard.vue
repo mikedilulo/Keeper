@@ -4,11 +4,11 @@
       <div class="col-md-4 d-flex justify-content-around mb-5 mt-5">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h1 class="card-title d-flex justify-content-center text-danger">Legal:</h1>
+            <h1 class="card-title d-flex justify-content-center text-danger">Trending Info:</h1>
             <strong>
               <p
                 class="card-text"
-              >Do not steal or acquire the rights to this website. You can be persecuted in the court of law if you do so.</p>
+              >Keeps that are trending will have an icon when you hover over them letting you know it is trending.</p>
             </strong>
           </div>
         </div>
