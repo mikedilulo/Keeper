@@ -5,9 +5,7 @@ import router from "./router";
 
 Vue.use(Vuex);
 
-let baseUrl = location.host.includes("localhost")
-  ? "https://localhost:5001/"
-  : "/";
+let baseUrl = "https://keepere.herokuapp.com/";
 
 let api = Axios.create({
   baseURL: baseUrl + "api/",
